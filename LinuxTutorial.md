@@ -6,7 +6,7 @@
 https://idash-hpc-vcacv.ucsd.edu/shell-ui-app/org/idash
 
 ## Log-in to VM 
-    ssh j5kim@172.21.53.22 -p 9221 
+    ssh username@xxx.xxx.xxx.xxx -p xxxx 
 
 
 ## Install PLINK, a whole genome association analysis toolset
