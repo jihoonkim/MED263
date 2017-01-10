@@ -164,16 +164,28 @@ $(document).ready(function () {
 </div>
 <div id="data-types" class="section level3">
 <h3>Data types</h3>
+<div id="logical" class="section level5">
+<h5>Logical</h5>
+<pre class="r"><code>relapse &lt;- TRUE
+typeof( relapse )</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>relapse</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>sbp &lt;- c(160, 110, 105, 150, 170)
+sbp &gt; 120</code></pre>
+<pre><code>## [1]  TRUE FALSE FALSE  TRUE  TRUE</code></pre>
+<pre class="r"><code>diag &lt;- ifelse( sbp &gt; 120, &quot;hypertension&quot;, &quot;normal&quot;)</code></pre>
+</div>
 <div id="number" class="section level5">
 <h5>Number</h5>
-<pre class="r"><code>a &lt;- 3
-a</code></pre>
-<pre><code>## [1] 3</code></pre>
-<pre class="r"><code>typeof( a )</code></pre>
+<pre class="r"><code>ldl &lt;- 100
+typeof( ldl )</code></pre>
 <pre><code>## [1] &quot;double&quot;</code></pre>
-<pre class="r"><code>b &lt;- 5
-a + b</code></pre>
-<pre><code>## [1] 8</code></pre>
+<pre class="r"><code>hdl &lt;- 60
+vldl &lt;- 25
+totalChol &lt;- hdl + ldl + vldl
+totalChol </code></pre>
+<pre><code>## [1] 185</code></pre>
 </div>
 <div id="vector-of-numbers" class="section level5">
 <h5>Vector of numbers</h5>
@@ -201,7 +213,9 @@ typeof( alleles )</code></pre>
 <pre class="r"><code>alleles </code></pre>
 <pre><code>##  [1] &quot;AG&quot; &quot;GG&quot; &quot;AA&quot; &quot;AA&quot; &quot;AA&quot; &quot;AA&quot; &quot;AA&quot; &quot;AG&quot; &quot;AG&quot; &quot;GG&quot; &quot;GG&quot; &quot;GG&quot; &quot;GG&quot; &quot;AA&quot;</code></pre>
 <pre class="r"><code>alleles &lt;- factor( alleles )
-typeof( alleles )</code></pre>
+levels( alleles )</code></pre>
+<pre><code>## [1] &quot;AA&quot; &quot;AG&quot; &quot;GG&quot;</code></pre>
+<pre class="r"><code>typeof( alleles )</code></pre>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
 <pre class="r"><code>alleles</code></pre>
 <pre><code>##  [1] AG GG AA AA AA AA AA AG AG GG GG GG GG AA
@@ -210,6 +224,24 @@ typeof( alleles )</code></pre>
 <pre><code>## alleles
 ## AA AG GG 
 ##  6  3  5</code></pre>
+</div>
+<div id="data-frames" class="section level5">
+<h5>Data Frames</h5>
+<pre class="r"><code>genotype &lt;- c(&quot;AA&quot;, &quot;AA&quot;, &quot;AA&quot;,  &quot;AA&quot;, &quot;AA&quot;, &quot;GG&quot;, &quot;GG&quot;, &quot;GG&quot;, &quot;GG&quot;)
+mrna &lt;- c(100, 90, 105, 87, 92, 20, 24, 35, 27)
+ethnicity &lt;- c(&quot;AFR&quot;, &quot;AFR&quot;, &quot;AFR&quot;, &quot;AMR&quot;,  &quot;AFR&quot;, &quot;ASN&quot;, &quot;EUR&quot;, &quot;EUR&quot;, &quot;EUR&quot;)
+relapse &lt;- c(&quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;no&quot;, &quot;no&quot;, &quot;no&quot;)
+study &lt;- data.frame( genotype, mrna, ethnicity, relapse)
+dim( study )</code></pre>
+<pre><code>## [1] 9 4</code></pre>
+<pre class="r"><code>head( study )</code></pre>
+<pre><code>##   genotype mrna ethnicity relapse
+## 1       AA  100       AFR     yes
+## 2       AA   90       AFR     yes
+## 3       AA  105       AFR     yes
+## 4       AA   87       AMR      no
+## 5       AA   92       AFR     yes
+## 6       GG   20       ASN      no</code></pre>
 </div>
 </div>
 

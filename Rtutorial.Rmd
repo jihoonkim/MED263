@@ -52,13 +52,25 @@ choose(5, 2)
 
 ### Data types 
 
+##### Logical
+```{r, echo = TRUE }
+relapse <- TRUE
+typeof( relapse )
+relapse
+sbp <- c(160, 110, 105, 150, 170)
+sbp > 120
+diag <- ifelse( sbp > 120, "hypertension", "normal")
+```
+
+
 ##### Number
 ```{r, echo = TRUE }
-a <- 3
-a
-typeof( a )
-b <- 5
-a + b
+ldl <- 100
+typeof( ldl )
+hdl <- 60
+vldl <- 25
+totalChol <- hdl + ldl + vldl
+totalChol 
 ```
 
 
@@ -83,12 +95,24 @@ alleles <- c( "AG", "GG", "AA", "AA", "AA", "AA", "AA", "AG", "AG", "GG", "GG", 
 typeof( alleles )
 alleles 
 alleles <- factor( alleles )
+levels( alleles )
 typeof( alleles )
 alleles
 table( alleles )
 ```
 
 
+
 ##### Data Frames 
-```{r, echo = TRUE }
+```{r, echo = TRUE } 
+genotype <- c("AA", "AA", "AA",  "AA", "AA", "GG", "GG", "GG", "GG")
+mrna <- c(100, 90, 105, 87, 92, 20, 24, 35, 27)
+ethnicity <- c("AFR", "AFR", "AFR", "AMR",  "AFR", "ASN", "EUR", "EUR", "EUR")
+relapse <- c("yes", "yes", "yes", "no", "yes", "no", "no", "no", "no")
+study <- data.frame( genotype, mrna, ethnicity, relapse)
+dim( study )
+head( study )
 ```
+
+
+
