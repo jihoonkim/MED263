@@ -1,5 +1,5 @@
 ##This is a test
 
-```shell
+```bash
 ls -hl
 ```
