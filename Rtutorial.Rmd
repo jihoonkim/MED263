@@ -129,12 +129,14 @@ table( pima$diabetes )
 
 ### Box plot
 ```{r, echo = TRUE}
-boxplot( gtt ~ diabetes, data = pima)
+boxplot( gtt ~ diabetes, 
+         data = pima)
 ```
 
 ### Box plot with added features
 ```{r, echo = TRUE}
-boxplot( gtt ~ diabetes, data = pima, 
+boxplot( gtt ~ diabetes, 
+         data = pima, 
          boxwex = 0.3,
          main = "Pima Indians Diabetes Study",
          ylab = "Glucose concentration", 
@@ -158,7 +160,8 @@ t.test( case, control )
 
 ### Box plot of DBP
 ```{r, echo = TRUE}
-boxplot( dbp ~ diabetes, data = pima, 
+boxplot( dbp ~ diabetes, 
+         data = pima, 
          boxwex = 0.3,
          main = "Pima Indians Diabetes Study",
          ylab = "Diastolic blood pressure", 
@@ -167,15 +170,14 @@ boxplot( dbp ~ diabetes, data = pima,
 
 ### Logistic regression with a binary outcome
 ```{r, echo = TRUE}
-m1 <- glm( diabetes ~ pregnancy + gtt + dbp + bmi + familyhistory, data=pima, family = "binomial")
+m1 <- glm( diabetes ~ pregnancy + gtt + dbp + bmi + familyhistory, 
+           data=pima, 
+           family = "binomial")
 round( summary( m1 )$coef, 3) 
 ```
 
-### R packages
+### Forest plot R package
 ```{r, echo = TRUE}
 library("forestmodel")
 forest_model( m1 )
 ```
-
-### Heatmap 
-
