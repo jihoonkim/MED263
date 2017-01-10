@@ -1,0 +1,94 @@
+---
+title: "MED263 R Tutorial"
+author: "Jihoon Kim (j5kim@ucsd.edu)"
+date: "1/12/2017"
+output: html_document
+fontsize: 10pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### R  
+
+R is 'GNU S', a freely available language and environment for statistical computing and graphics which provides a wide variety of statistical and graphical techniques
+
+- linear and nonlinear modeling
+- statistial tests
+- time series analysis
+- classification
+- clustering
+- genomics
+
+
+Download and install R (precompiled binary distribution) from UCLA <http://cran.stat.ucla.edu>, the nearest R mirror site <http://cran.r-project.org/mirrors.html> 
+
+
+### R Studio 
+
+RStudio is a set of integrated development environment (IDE) designed to help you be more prudictive with R. It includes 
+
+- console
+- syntax-highlighting editor that supports direct code execution
+- plotting
+- history
+- debugging 
+- workspace management. 
+
+Download and install RStudio from <https://www.rstudio.com/products/rstudio/download>
+
+
+### Calculate some numbers
+
+```{r, echo = TRUE }
+1 + 2
+2^4
+log(16, 2)
+log(1000, 3)
+choose(5, 2)
+```
+
+
+### Data types 
+
+##### Number
+```{r, echo = TRUE }
+a <- 3
+a
+typeof( a )
+b <- 5
+a + b
+```
+
+
+##### Vector of numbers
+```{r, echo = TRUE }
+cholesterol <- c(177, 193, 195, 209, 226)
+typeof( cholesterol )
+length( cholesterol )
+mean( cholesterol )
+max( cholesterol )
+```
+
+##### Vector of characters
+```{r, echo = TRUE }
+genotype <- c("AA", "AG", "GG")
+typeof( genotype )
+```
+
+##### Factors
+```{r, echo = TRUE }
+alleles <- c( "AG", "GG", "AA", "AA", "AA", "AA", "AA", "AG", "AG", "GG", "GG", "GG", "GG", "AA")
+typeof( alleles )
+alleles 
+alleles <- factor( alleles )
+typeof( alleles )
+alleles
+table( alleles )
+```
+
+
+##### Data Frames 
+```{r, echo = TRUE }
+```
