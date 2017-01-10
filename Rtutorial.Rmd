@@ -121,9 +121,10 @@ head( study )
 # They describe characteristics of the cell nuclei present in the image. 
 url <-"http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
 pima <- read.table( url, sep=",")
-colnames( pima ) <- c("pregnancy", "gtt", "dbp", "skinthickness", "insulin", "bmi", "pedigre", "age", "diabetes")
+colnames( pima ) <- c("pregnancy", "gtt", "dbp", "skinthickness", "insulin", "bmi", "familyhistory", "age", "diabetes")
 head( pima )
 dim( pima )
+table( pima$diabetes )
 ```
 
 ### Box plot
@@ -136,10 +137,45 @@ boxplot( gtt ~ diabetes, data = pima)
 boxplot( gtt ~ diabetes, data = pima, 
          boxwex = 0.3,
          main = "Pima Indians Diabetes Study",
-         ylab = "Glucose concentration in GTT", 
-         xlab = "diabetes")
+         ylab = "Glucose concentration", 
+         xlab = "Diabetes")
 ```
 
+
+### Two group comparison, glucose concentration in GTT
+```{r, echo = TRUE}
+case <- pima$gtt[ pima$diabetes == 1]
+control <- pima$gtt[ pima$diabetes == 0]
+t.test( case, control ) 
+```
+
+### Two group comparison, Diastolic blood pressure (DBP)
+```{r, echo = TRUE}
+case <- pima$dbp[ pima$diabetes == 1]
+control <- pima$dbp[ pima$diabetes == 0]
+t.test( case, control ) 
+```
+
+### Box plot of DBP
+```{r, echo = TRUE}
+boxplot( dbp ~ diabetes, data = pima, 
+         boxwex = 0.3,
+         main = "Pima Indians Diabetes Study",
+         ylab = "Diastolic blood pressure", 
+         xlab = "Diabetes")
+```
+
+### Logistic regression with a binary outcome
+```{r, echo = TRUE}
+m1 <- glm( diabetes ~ pregnancy + gtt + dbp + bmi + familyhistory, data=pima, family = "binomial")
+round( summary( m1 )$coef, 3) 
+```
+
+### R packages
+```{r, echo = TRUE}
+library("forestmodel")
+forest_model( m1 )
+```
 
 ### Heatmap 
 
