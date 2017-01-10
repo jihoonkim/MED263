@@ -52,7 +52,7 @@ choose(5, 2)
 
 ### Data types 
 
-##### Logical
+##### 1. Logical
 ```{r, echo = TRUE }
 relapse <- TRUE
 typeof( relapse )
@@ -63,7 +63,7 @@ diag <- ifelse( sbp > 120, "hypertension", "normal")
 ```
 
 
-##### Number
+##### 2. Number
 ```{r, echo = TRUE }
 ldl <- 100
 typeof( ldl )
@@ -74,7 +74,7 @@ totalChol
 ```
 
 
-##### Vector of numbers
+##### 3. Vector of numbers
 ```{r, echo = TRUE }
 cholesterol <- c(177, 193, 195, 209, 226)
 typeof( cholesterol )
@@ -83,13 +83,13 @@ mean( cholesterol )
 max( cholesterol )
 ```
 
-##### Vector of characters
+##### 4. Vector of characters
 ```{r, echo = TRUE }
 genotype <- c("AA", "AG", "GG")
 typeof( genotype )
 ```
 
-##### Factors
+##### 5. Factors
 ```{r, echo = TRUE }
 alleles <- c( "AG", "GG", "AA", "AA", "AA", "AA", "AA", "AG", "AG", "GG", "GG", "GG", "GG", "AA")
 typeof( alleles )
@@ -103,7 +103,7 @@ table( alleles )
 
 
 
-##### Data Frames 
+##### 6. Data Frames 
 ```{r, echo = TRUE } 
 genotype <- c("AA", "AA", "AA",  "AA", "AA", "GG", "GG", "GG", "GG")
 mrna <- c(100, 90, 105, 87, 92, 20, 24, 35, 27)
@@ -115,4 +115,31 @@ head( study )
 ```
 
 
+### Load data from a file 
+```{r, echo = TRUE}
+# Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. 
+# They describe characteristics of the cell nuclei present in the image. 
+url <-"http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+pima <- read.table( url, sep=",")
+colnames( pima ) <- c("pregnancy", "gtt", "dbp", "skinthickness", "insulin", "bmi", "pedigre", "age", "diabetes")
+head( pima )
+dim( pima )
+```
+
+### Box plot
+```{r, echo = TRUE}
+boxplot( gtt ~ diabetes, data = pima)
+```
+
+### Box plot with added features
+```{r, echo = TRUE}
+boxplot( gtt ~ diabetes, data = pima, 
+         boxwex = 0.3,
+         main = "Pima Indians Diabetes Study",
+         ylab = "Glucose concentration in GTT", 
+         xlab = "diabetes")
+```
+
+
+### Heatmap 
 
