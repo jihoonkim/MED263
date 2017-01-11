@@ -27,8 +27,10 @@
 
 
 #### snpEff
-```bash
-wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
+```Shell
+$ mkdir ~/snpeff
+$ cd ~/snpeff
+$ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
 ```
 
 
