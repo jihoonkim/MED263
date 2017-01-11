@@ -25,12 +25,44 @@
 2.2
 ```
 
-
-#### snpEff
+### Install SnpEff, Shell
 ```Shell
 $ mkdir ~/snpeff
 $ cd ~/snpeff
 $ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
+$ unzip snpEff_latest_core.zip
+$ ls -hl 
+$ date
+```
+
+### Install SnpEff, shell
+```shell
+$ mkdir ~/snpeff
+$ cd ~/snpeff
+$ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
+$ unzip snpEff_latest_core.zip
+$ ls -hl 
+$ date
+```
+
+### Install SnpEff, sh
+```sh
+$ mkdir ~/snpeff
+$ cd ~/snpeff
+$ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
+$ unzip snpEff_latest_core.zip
+$ ls -hl 
+$ date
+```
+
+### Install SnpEff, bsh
+```bsh
+$ mkdir ~/snpeff
+$ cd ~/snpeff
+$ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
+$ unzip snpEff_latest_core.zip
+$ ls -hl 
+$ date
 ```
 
 
