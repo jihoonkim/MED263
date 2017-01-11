@@ -3,10 +3,10 @@
 
 ---
 
-## Aim 
-1. Learn basic linux commands
-2. Perform association test with [PLINK](http://pngu.mgh.harvard.edu/~purcell/plink)
-3. Annotate variant with [SnpEff](http://snpeff.sourceforge.net)
+## Aim : learn basic linux commands through bioinformatics apps
+1. Perform genotype-phenotype association test with PLINK 
+2. Create a small subset from the raw .vcf file with VCFTools 
+3. Annotate genetic variants with SnpEff 
 
 
 ## Log-in to VM (type this in your local computer)
@@ -132,9 +132,61 @@ $ cat rs219746.model
 
 ### Install SnpEff
 ```ShellSession
-$ mkdir ~/snpeff
-$ cd ~/snpeff
+$ cd ~
 $ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
+$ cd snpEff
 $ unzip snpEff_latest_core.zip
 ```
+
+
+### Download resource data (pre-built human database)
+```ShellSession
+$ java -jar snpEff.jar download -v GRCh37.75
+```
+
+
+
+### Download VCF file
+```ShellSession
+$ cd ~
+$ wget ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/NISTv3.2/NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highconf.vcf.gz
+$ gunzip NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highconf.vcf.gz 
+$ wc -l NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highconf.vcf 
+```
+
+
+### Install and run vcfools to create a small VCF (for a quick test-run during the class)
+```ShellSession
+$ cd ~
+$ sudo apt-get install -y -y build-essential git g++ htop libncurses5-dev \
+ libssl-dev make pkg-config software-properties-common make zlibc zlib1g zlib1g-dev  
+$ git clone https://github.com/vcftools/vcftools.git
+$ cd vcftools
+$ sudo ./autogen.sh
+$ sudo ./configure
+$ sudo make
+$ sudo make install
+$ cd ~
+$ vcftools --help
+$ vcftools --vcf NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highconf.vcf  --chr 21 --recode --recode-INFO-all --out chr21
+$ wc -l chr21.recode.vcf
+```
+
+
+### Annotate the VCF 
+```ShellSession
+$ java -Xmx7g -jar ~/snpEff/snpEff.jar -v GRCh37.75  chr21.recode.vcf > chr21anno.vcf
+```
+
+### Filter the high-impact variants only.
+#### high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.  
+```ShellSession
+$ grep HIGH chr1anno.vcf 
+$ grep HIGH chr1anno.vcf | wc -l
+$ grep HIGH chr1anno.vcf  >> high.vcf 
+```
+
+
+
+
 
