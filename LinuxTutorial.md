@@ -2,12 +2,13 @@
 # MED 263 Linux Tutorial
 
 
-## vCloud Automation Center (vCAC)
+### vCloud Automation Center (vCAC)
 https://idash-hpc-vcacv.ucsd.edu/shell-ui-app/org/idash
 
 
-## SSH client in your laptop
+### SSH client in your laptop
 Windows: Putty (http://www.putty.org/)
+
 macOS / Linux: Terminal
 
 
