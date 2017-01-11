@@ -9,12 +9,13 @@
 
 
 #### Division
-	```python
-    12 / 5
-    11 / 5
-    11.0 / 5
+```python
+12 / 5
+11 / 5
+11.0 / 5
+```
+
 
 #### String
-	:::python
 	'AG' * 12
 	'TATA' in 'TATATATATATATATATA'
