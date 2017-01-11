@@ -99,7 +99,8 @@ $ plink --file hapmap1 --make-bed --out hapmap1 --noweb
 ### List the files to see newly created files
 ```Shell
 $ ls -hl
-```]
+```
+
 ### Perform association test (allelic test)
 ```Shell
 $ plink --bfile hapmap1 --assoc --out as1 --noweb
@@ -117,7 +118,7 @@ $ cat rs219746.model
 ```
 
 
-
+---
 ## Genetic variant annotation and effect prediction 
 
 ### Install SnpEff
