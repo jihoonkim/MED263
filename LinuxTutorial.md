@@ -9,9 +9,11 @@
 3. Annotate genetic variants with [SnpEff](http://snpeff.sourceforge.net)
 
 
-## Log-in to VM (type this in your local computer)
-    ssh username@xxx.xxx.xxx.xxx -p xxxx 
-
+## Log-in to VM (in your local computer)
+```Shell
+$ ssh username@xxx.xxx.xxx.xxx -p xxxx 
+password: 8-digit-RSA_app_passcode
+```
 <!---
 #### vCloud Automation Center (vCAC)
 https://idash-hpc-vcacv.ucsd.edu/shell-ui-app/org/idash
@@ -179,14 +181,14 @@ $ java -Xmx7g -jar ~/snpEff/snpEff.jar -v GRCh37.75  chr21.recode.vcf > chr21ann
 ```
 
 ### Filter the high-impact variants only.
-#### high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.  
+#### high-impact: high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.  
 ```ShellSession
-$ grep HIGH chr1anno.vcf 
-$ grep HIGH chr1anno.vcf | wc -l
-$ grep HIGH chr1anno.vcf  >> high.vcf 
+$ grep HIGH chr21anno.vcf 
+$ grep HIGH chr21anno.vcf | wc -l
+$ grep HIGH chr21anno.vcf  >> chr21annohigh.vcf
 ```
 
-
+### Repeat SnpEff annotation with the whole .vcf file
 
 
 
