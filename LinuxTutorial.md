@@ -1,6 +1,12 @@
 
 # MED 263 Linux Tutorial
 
+---
+
+## Aim 
+1. Learn basic linux commands
+2. Perform association test with PLINK
+3. Annotate variant with SnpEff 
 
 
 ## Log-in to VM (type this in your local computer)
