@@ -1,11 +1,17 @@
 ---
-### MED 263 Linux Tutorial
+# MED 263 Linux Tutorial
 
 
-### vCloud Automation Center (vCAC)
+## vCloud Automation Center (vCAC)
 https://idash-hpc-vcacv.ucsd.edu/shell-ui-app/org/idash
 
-## Log-in to VM 
+
+## SSH client in your laptop
+Windows: Putty (http://www.putty.org/)
+macOS / Linux: Terminal
+
+
+## Log-in to VM (type this in your local computer)
     ssh username@xxx.xxx.xxx.xxx -p xxxx 
 
 
@@ -68,7 +74,7 @@ https://idash-hpc-vcacv.ucsd.edu/shell-ui-app/org/idash
     grep rs21974  as1.assoc
     grep -w rs219746  as1.assoc
     sort --key=8 -nr as1.assoc | head -n 20
-    awk '{ if( $9 < 0.00005 ) print $0 } ' as1.assoc 
+    awk '{ if( $9 < 0.00005 ) print $0 }' as1.assoc 
 
 ### Perform association test (5 different inheritance model)
     plink --bfile hapmap1 --model --cell 0 --snp rs219746 --out rs219746 --noweb 
