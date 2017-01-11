@@ -4,9 +4,9 @@
 ---
 
 ## Aim : learn basic linux commands through bioinformatics apps
-1. Perform genotype-phenotype association test with PLINK 
-2. Create a small subset from the raw .vcf file with VCFTools 
-3. Annotate genetic variants with SnpEff 
+1. Perform genotype-phenotype association test with [PLINK](http://pngu.mgh.harvard.edu/~purcell/plink)
+2. Create a small subset from the raw .vcf file with [VCFTools](https://vcftools.github.io) 
+3. Annotate genetic variants with [SnpEff](http://snpeff.sourceforge.net)
 
 
 ## Log-in to VM (type this in your local computer)
