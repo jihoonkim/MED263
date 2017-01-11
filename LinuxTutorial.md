@@ -1,4 +1,4 @@
----
+
 # MED 263 Linux Tutorial
 
 
@@ -15,7 +15,7 @@ macOS / Linux: Terminal
 ## Log-in to VM (type this in your local computer)
     ssh username@xxx.xxx.xxx.xxx -p xxxx 
 
-
+---
 ## Install PLINK, a whole genome association analysis toolset
 #### Change a directory
 ```Shell
@@ -63,6 +63,7 @@ $ plink --help
 
 
 
+---
 
 ## Run PLINK
 
@@ -122,7 +123,7 @@ $ cat rs219746.model
 ## Genetic variant annotation and effect prediction 
 
 ### Install SnpEff
-```Shell
+```ShellSession
 $ mkdir ~/snpeff
 $ cd ~/snpeff
 $ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
