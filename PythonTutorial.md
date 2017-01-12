@@ -48,6 +48,7 @@
 #### File parsing
 ```Shell
 $ cd ~/annotation
+$ python
 ```
 ```python
 >>> fname = "chr21anno.vcf"
