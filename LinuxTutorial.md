@@ -92,17 +92,20 @@ $ cd ~/hapmap
 
 ### Download the example data
 ```Shell
+$ cd ~/hapmap
 $ wget http://pngu.mgh.harvard.edu/~purcell/plink/hapmap1.zip
 $ unzip hapmap1.zip
 ```
 
 ### List the files
 ```Shell
+$ cd ~/hapmap
 $ ls -hl
 ```
 
 ### Take a look at data
 ```Shell
+$ cd ~/hapmap
 $ wc -l hapmap1.map
 $ wc -l hapmap1.ped
 $ head hapmap1.map
@@ -111,16 +114,19 @@ $ head hapmap1.ped | cut -d ' ' -f 1-6
 
 ### Make a binary PED file
 ```Shell
+$ cd ~/hapmap
 $ plink --file hapmap1 --make-bed --out hapmap1 --noweb
 ```
 
 ### List the files to see newly created files
 ```Shell
+$ cd ~/hapmap
 $ ls -hl
 ```
 
 ### Perform association test (allelic test)
 ```Shell
+$ cd ~/hapmap
 $ plink --bfile hapmap1 --assoc --out as1 --noweb
 $ wc -l as1.assoc
 $ head as1.assoc
@@ -131,6 +137,7 @@ $ awk '{ if( $9 < 0.00005 ) print $0 }' as1.assoc
 ```
 ### Perform association test (5 different inheritance model)
 ```Shell
+$ cd ~/hapmap
 $ plink --bfile hapmap1 --model --cell 0 --snp rs219746 --out rs219746 --noweb 
 $ cat rs219746.model
 ```
@@ -194,6 +201,7 @@ $ tail chr21anno.vcf
 ### Filter the high-impact variants only.
 #### high-impact: high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.  
 ```ShellSession
+$ cd ~/annotation
 $ grep HIGH chr21anno.vcf 
 $ grep HIGH chr21anno.vcf | wc -l
 $ grep HIGH chr21anno.vcf  >> chr21annohigh.vcf
@@ -204,7 +212,9 @@ $ tail chr21annohigh.vcf
 
 ### Transfer annotation output to your local laptop computer
 ```ShellSession
-$ 
+$ cd ~/annotation
+$ zip archive.zip chr21annohigh.vcf snpEff_summary.html 
+$ scp username@IPaddress:/home/username/annotation/archive.zip -P portnumber .
 ```
 
 ### Repeat SnpEff annotation with the whole .vcf file
