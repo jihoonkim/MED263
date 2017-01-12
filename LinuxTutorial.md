@@ -10,6 +10,9 @@
 
 
 ## Log-in to VM (in your local computer)
+```diff
+- Please type the command below in the terminal of your local laptop computer
+```
 ```Shell
 $ ssh username@xxx.xxx.xxx.xxx -p xxxx 
 password: 8-digit-RSA_app_passcode
@@ -212,7 +215,7 @@ $ tail chr21annohigh.vcf
 
 ### Transfer annotation output to your local laptop computer
 ```diff
-- Please type these commands in the terminal of your local laptop computer
+- Please type the commands below in the terminal of your local laptop computer
 ```
 ```ShellSession
 $ cd ~/annotation
