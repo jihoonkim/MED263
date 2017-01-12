@@ -150,7 +150,7 @@ $ unzip snpEff_latest_core.zip
 ### Download resource data (pre-built human database)
 ```ShellSession
 $ cd ~/snpEff
-$ sudo java -jar snpEff.jar download -v GRCh37.75
+$ nohup java -jar snpEff.jar download -v GRCh37.75 & 
 ```
 
 
