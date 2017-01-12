@@ -186,6 +186,9 @@ $ wc -l chr21.recode.vcf
 ```ShellSession
 $ cd ~/annotation
 $ java -Xmx7g -jar ~/snpEff/snpEff.jar -v GRCh37.75  chr21.recode.vcf > chr21anno.vcf
+$ wc -l chr21anno.vcf
+$ head chr21anno.vcf
+$ tail chr21anno.vcf
 ```
 
 ### Filter the high-impact variants only.
@@ -194,6 +197,9 @@ $ java -Xmx7g -jar ~/snpEff/snpEff.jar -v GRCh37.75  chr21.recode.vcf > chr21ann
 $ grep HIGH chr21anno.vcf 
 $ grep HIGH chr21anno.vcf | wc -l
 $ grep HIGH chr21anno.vcf  >> chr21annohigh.vcf
+$ wc -l chr21annohigh.vcf
+$ head chr21annohigh.vcf
+$ tail chr21annohigh.vcf
 ```
 
 ### Transfer annotation output to your local laptop computer
