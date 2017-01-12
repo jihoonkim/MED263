@@ -150,7 +150,7 @@ $ unzip snpEff_latest_core.zip
 ### Download resource data (pre-built human database)
 ```ShellSession
 $ cd ~/snpEff
-$ java -jar snpEff.jar download -v GRCh37.75
+$ sudo java -jar snpEff.jar download -v GRCh37.75
 ```
 
 
@@ -194,6 +194,11 @@ $ java -Xmx7g -jar ~/snpEff/snpEff.jar -v GRCh37.75  chr21.recode.vcf > chr21ann
 $ grep HIGH chr21anno.vcf 
 $ grep HIGH chr21anno.vcf | wc -l
 $ grep HIGH chr21anno.vcf  >> chr21annohigh.vcf
+```
+
+### Transfer annotation output to your local laptop computer
+```ShellSession
+$ 
 ```
 
 ### Repeat SnpEff annotation with the whole .vcf file
