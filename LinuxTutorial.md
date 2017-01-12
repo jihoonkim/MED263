@@ -27,6 +27,12 @@ macOS / Linux: Terminal
 
 ---
 ## Install PLINK, a whole genome association analysis toolset
+
+#### Change a shell to bash
+```Shell
+$ bash 
+```
+
 #### Change a directory
 ```Shell
 $ cd ~ 
@@ -61,6 +67,7 @@ $ plink --help
 #### Add a path to PLINK to the Ubuntu environment file
 ```Shell
 $ echo 'export PATH="~/plink-1.07-x86_64:$PATH"' >> ~/.bashrc 
+$ source ~/.bashrc
 ```
 
 #### Test run PLINK after adding a path-to-PLINK
@@ -136,8 +143,8 @@ $ cat rs219746.model
 ```ShellSession
 $ cd ~
 $ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
-$ cd snpEff
 $ unzip snpEff_latest_core.zip
+$ cd snpEff
 ```
 
 
