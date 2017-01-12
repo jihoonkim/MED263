@@ -45,6 +45,20 @@
 ```
 
 
+#### File parsing
+```Shell
+$ cd ~/annotation
+```
+```python
+>>> fname = "chr21anno.vcf"
+>>> fh = open(fname)
+>>> line = fh.readline()
+>>> while line.startswith("#"):
+...     line = fh.readline()
+... 
+>>> line = line.rstrip("\n")
+>>> arr = line.split("\t")
+>>> arr
+['21', '9412105', '.', 'A', 'T', '50.0', 'PASS', 'platforms=3;platformnames=Illumina,CG,Solid;datasets=3;datasetnames=HiSeqPE300x,CGnormal,SolidSE75bp;callsets=4;callsetnames=HiSeqPE300xfreebayes,HiSeqPE300xGATK,CGnormal,SolidSE75GATKHC;datasetsmissingcall=IonExome,SolidPE50x50bp;lowcov=CS_IonExomeTVC_lowcov,CS_SolidPE50x50GATKHC_lowcov,CS_SolidSE75GATKHC_lowcov;filt=CS_HiSeqPE300xfreebayes_filt,CS_HiSeqPE300xGATK_filt;ANN=T|intergenic_region|MODIFIER|CR381670.1|ENSG00000238411|intergenic_region|ENSG00000238411|||n.9412105A>T||||||', 'GT:PS:DP:GQ', '0/1:.:1157:99']
 
-
-
+```
