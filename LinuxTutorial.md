@@ -144,12 +144,12 @@ $ cat rs219746.model
 $ cd ~
 $ wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
 $ unzip snpEff_latest_core.zip
-$ cd snpEff
 ```
 
 
 ### Download resource data (pre-built human database)
 ```ShellSession
+$ cd ~/snpEff
 $ java -jar snpEff.jar download -v GRCh37.75
 ```
 
