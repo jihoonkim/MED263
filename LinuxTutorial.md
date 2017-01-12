@@ -211,10 +211,13 @@ $ tail chr21annohigh.vcf
 ```
 
 ### Transfer annotation output to your local laptop computer
+```diff
+- Please type these commands in the terminal of your local laptop computer
+```
 ```ShellSession
 $ cd ~/annotation
 $ zip archive.zip chr21annohigh.vcf snpEff_summary.html 
-$ scp username@IPaddress:/home/username/annotation/archive.zip -P portnumber .
+$ scp -P portnumber username@IPaddress:/home/username/annotation/archive.zip .
 ```
 
 ### Repeat SnpEff annotation with the whole .vcf file
