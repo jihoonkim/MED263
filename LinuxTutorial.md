@@ -168,8 +168,7 @@ $ wc -l NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highcon
 ### Install and run vcfools to create a small VCF (for a quick test-run during the class)
 ```ShellSession
 $ cd ~
-$ sudo apt-get install -y -y build-essential git g++ htop libncurses5-dev \
- libssl-dev make pkg-config software-properties-common make zlibc zlib1g zlib1g-dev  
+$ sudo apt-get install -y -y build-essential git g++ htop libncurses5-dev libssl-dev make pkg-config software-properties-common make zlibc zlib1g zlib1g-dev  
 $ git clone https://github.com/vcftools/vcftools.git
 $ cd vcftools
 $ sudo ./autogen.sh
