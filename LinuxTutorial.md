@@ -157,7 +157,8 @@ $ java -jar snpEff.jar download -v GRCh37.75
 
 ### Download VCF file
 ```ShellSession
-$ cd ~
+$ mkdir ~/annotation
+$ cd ~/annotation
 $ wget ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/NISTv3.2/NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highconf.vcf.gz
 $ gunzip NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highconf.vcf.gz 
 $ wc -l NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highconf.vcf 
@@ -175,8 +176,8 @@ $ sudo ./autogen.sh
 $ sudo ./configure
 $ sudo make
 $ sudo make install
-$ cd ~
 $ vcftools --help
+$ cd ~/annotation
 $ vcftools --vcf NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_highconf.vcf  --chr 21 --recode --recode-INFO-all --out chr21
 $ wc -l chr21.recode.vcf
 ```
@@ -184,6 +185,7 @@ $ wc -l chr21.recode.vcf
 
 ### Annotate the VCF 
 ```ShellSession
+$ cd ~/annotation
 $ java -Xmx7g -jar ~/snpEff/snpEff.jar -v GRCh37.75  chr21.recode.vcf > chr21anno.vcf
 ```
 

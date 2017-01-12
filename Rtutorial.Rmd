@@ -217,3 +217,16 @@ legend("bottomleft",
        legend=levels(race), 
        text.col=1:nlevels(race))
 ```
+
+### Manhattan Plot
+```{r, echo = TRUE}
+library(manhattanly)
+dim( HapMap )
+head( HapMap )
+HapMap[ HapMap$P < 10^(-8), ]
+manhattanly(HapMap, 
+            snp = "SNP",
+            gene = "GENE", 
+            annotation1 = "ZSCORE", annotation2 = "EFFECTSIZE", 
+            highlight = significantSNP)
+```
