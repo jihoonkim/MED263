@@ -52,7 +52,7 @@ grep '1~Long QT syndrome 3~Pathogenic' MA0000901P.sga.txt |cut -f 9
 
 # Q16
 sed '1d' ID00009.sga.txt | cut -f 84 | sort -V > idiom.txt
-grep '1-Epileptic encephalopathy, early infantile, 26~Pathogenic' ID00009.sga.txt
+grep "1~Epileptic encephalopathy, early infantile, 26~Pathogenic" ID00009.sga.txt  | tr '\t' '\n'
  
 # Q17: Genotypes follow this order '01P-02M-03F'. Unique variants for the proband will have this string '01-00-00'. Note that In the Proband they will be de-novo
 #  - 01P
