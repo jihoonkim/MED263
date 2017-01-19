@@ -3,6 +3,11 @@
 #   Week2 script
 #   Author : Manuel Rueda <mrueda@scripps.edu>
 #-----------------------------------------------------------------------------
+sftp med263@wellderlyweb.scripps.edu
+********
+get *
+quit
+tar -xvf med263.tar.gz
 
 # Tip 1 
 gzip MA0000901P.vcf
