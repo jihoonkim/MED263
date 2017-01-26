@@ -54,7 +54,7 @@ cd workingdir
 #what is the longest gene in the list ?
 	awk '$5=$3-$2' ../resources/CGC.exons.bed | sort -nrk 5 | head
 #what is the sum of the length of all the exons
-	awk '{sum=sum+$3-$2} END {print sum/NR}' ../resources/CGC.exons.bed
+	awk '{sum=sum+$3-$2} END {print sum}' ../resources/CGC.exons.bed
 
 
 ###########
