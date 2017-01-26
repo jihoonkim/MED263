@@ -49,4 +49,4 @@ sed -i '/^127.0.0.1/ s/$/ localhost/'  /etc/hosts
 service nxserver start 
 
 # reboot
-#reboot
+reboot
