@@ -3,18 +3,18 @@
 #-----------------------------------------------------------------------------
 # File: install_gnome_and_nomachine.sh
 # Author: Jihoon Kim 
-# Description: Install GNOME desktop environment for ubuntu and
-#                      NOMACHINE for remote desktop access to ubuntu VM
-# Date: 1/25/2017
+# Description: Install GNOME, a desktop environment for Ubuntu, and
+#                      NoMachine, a tool for remote desktop access
+# Date: 1/26/2017
 #-----------------------------------------------------------------------------
-# update ubuntu
+# update ubuntu packages
 apt-get update
 
-# close the opened port 25 for mail server 
-#systemctl stop postfix
-#systemctl disable postfix
+# stop and disable Postfix, the default mail transfer agent in Ubuntu
+#  (This closes the unnecessarily opened port 25)
+systemctl stop postfix
 
-# install gnome  
+# install GNOME, a desktop environment for Ubuntu  
 apt-get install -y ubuntu-gnome-desktop
 
 # change the GDM authenticaion to that of SSHD
@@ -31,7 +31,7 @@ cp /etc/pam.d/sshd /etc/pam.d/gdm-password
 # start GNOME Display Manager (GDM) 
 systemctl start gdm3 
 
-# install nomachine server
+# install NoMachine server
 wget http://download.nomachine.com/download/5.1/Linux/nomachine_5.1.62_1_amd64.deb
 dpkg -i nomachine_5.1.62_1_amd64.deb
 
@@ -47,6 +47,3 @@ sed -i '/^127.0.0.1/ s/$/ localhost/'  /etc/hosts
 
 # restart NX server
 service nxserver start 
-
-# reboot
-# reboot
