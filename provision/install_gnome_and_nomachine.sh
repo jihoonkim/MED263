@@ -10,9 +10,6 @@
 # update Ubuntu
 apt-get update -y
 
-# upgrade Ubuntu
-apt-get upgrade -y
-
 # close the opened port 25 for mail server 
 systemctl stop postfix
 systemctl disable postfix
