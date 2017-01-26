@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR948508_2	/home/j5kim/MED263_harismendy/workingdir/fastqc/SRR948508_2_fastqc.zip
+FastQC	all_sections	SRR948508_1	/home/j5kim/MED263_harismendy/workingdir/fastqc/SRR948508_1_fastqc.zip
+FastQC	all_sections	SRR866442_1	/home/j5kim/MED263_harismendy/workingdir/fastqc/SRR866442_1_fastqc.zip
+FastQC	all_sections	SRR866442_2	/home/j5kim/MED263_harismendy/workingdir/fastqc/SRR866442_2_fastqc.zip
