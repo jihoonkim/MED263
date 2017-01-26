@@ -11,20 +11,31 @@
 apt-get update
 
 # close the opened port 25 for mail server 
-systemctl stop postfix
-systemctl disable postfix
+#systemctl stop postfix
+#systemctl disable postfix
 
 # install gnome  
-apt-get install -y gnome gnome-core ubuntu-gnome-desktop
+apt-get install -y ubuntu-gnome-desktop
 
-# disable gnome screensaver 
+# change the GDM authenticaion to that of SSHD
+mv /etc/pam.d/gdm-launch-environment /etc/pam.d/gdm-launch-environment-default
+cp /etc/pam.d/sshd /etc/pam.d/gdm-launch-environment
+
+mv /etc/pam.d/gdm-autologin /etc/pam.d/gdm-autologin-default
+cp /etc/pam.d/sshd /etc/pam.d/gdm-autologin
+
+mv /etc/pam.d/gdm-password /etc/pam.d/gdm-password-default
+cp /etc/pam.d/sshd /etc/pam.d/gdm-password
+
+
+# start GNOME Display Manager (GDM) 
+systemctl start gdm3 
 
 # install nomachine server
 wget http://download.nomachine.com/download/5.1/Linux/nomachine_5.1.62_1_amd64.deb
 dpkg -i nomachine_5.1.62_1_amd64.deb
 
-
-# change the NX authentication to that of sshd
+# change the NX authentication to that of SSHD
 mv /etc/pam.d/nx  /etc/pam.d/nx-default
 cp /etc/pam.d/sshd /etc/pam.d/nx 
 
@@ -36,3 +47,6 @@ sed -i '/^127.0.0.1/ s/$/ localhost/'  /etc/hosts
 
 # restart NX server
 service nxserver start 
+
+# reboot
+#reboot
