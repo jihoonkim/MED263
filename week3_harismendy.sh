@@ -47,7 +47,7 @@ cd workingdir
 	wc -l ../resources/CGC.exons.bed
 #How many CGC exons on chromosome 1 ?
 	awk '$1=="chr1"' ../resources/CGC.exons.bed | wc -l
-#how many CGC genes on chromsome 1?
+#how many CGC genes in total?
 	cut -f 4 ../resources/CGC.exons.bed | sort | uniq | wc -l
 #how many exons per CGC gene ?
 	cut -f 4 ../resources/CGC.exons.bed | sort | uniq -c | sort -r | more
