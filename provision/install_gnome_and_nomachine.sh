@@ -7,6 +7,11 @@
 #                      NOMACHINE for remote desktop access to ubuntu VM
 # Date: 1/25/2017
 #-----------------------------------------------------------------------------
+# update Ubuntu
+apt-get update -y
+
+# upgrade Ubuntu
+apt-get upgrade -y
 
 # close the opened port 25 for mail server 
 systemctl stop postfix
