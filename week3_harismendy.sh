@@ -121,7 +121,7 @@ cd workingdir
 
 # 	1 copy the bam and bai file to your laptop
 #      # type this your terminal application in your laptop 
-#      scp -P 9221 username@IPaddress:/home/username/path/my.bam .
+#      scp -P 9221 username@172.XX.XX.XX:/home/username/MED263_harismendy/materials/CPTRES7*bam* .
 #      password:*******
 #      
 #	2. open with IGV
