@@ -139,7 +139,7 @@ cd workingdir
 	grep '^chr21' ../resources/CGC.exons.bed | awk '{sum+=$3-$2} END {print sum}' #total number of CGC exons bp on chr21
 
 #how many RUNX1 base pairs are covered at 20x or greater?
-	bedtools coverage -a ../resourcesCGC.exons.bed -b ../material/CPTRES7.chr21.bam -hist | grep 'RUNX1' | awk '$5>20' | awk '{sum+=$6} END {print sum}' #solution #1
+	bedtools coverage -a ../resources/CGC.exons.bed -b ../materials/CPTRES7.chr21.bam -hist | grep 'RUNX1' | awk '$5>20' | awk '{sum+=$6} END {print sum}' #solution #1
 	grep 'RUNX1' ../resources/CGC.exons.bed | samtools depth -b - ../materials/CPTRES7.chr21.bam | awk '$3>20' | wc -l #solution #2
 
 
