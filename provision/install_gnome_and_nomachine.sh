@@ -22,7 +22,7 @@ wget http://download.nomachine.com/download/5.1/Linux/nomachine_5.1.62_1_amd64.d
 dpkg -i nomachine_5.1.62_1_amd64.deb
 
 # install gnome  
-apt-get install gnome-core ubuntu-gnome-desktop
+apt-get install -y gnome-core ubuntu-gnome-desktop
 
 # disable gnome screen saver 
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
