@@ -14,14 +14,14 @@ apt-get update
 systemctl stop postfix
 systemctl disable postfix
 
+# install gnome  
+apt-get install -y gnome gnome-core ubuntu-gnome-desktop
+
+# disable gnome screensaver 
+
 # install nomachine server
 wget http://download.nomachine.com/download/5.1/Linux/nomachine_5.1.62_1_amd64.deb
 dpkg -i nomachine_5.1.62_1_amd64.deb
-
-# install gnome  
-apt-get install -y gnome-core ubuntu-gnome-desktop
-
-# disable gnome screen saver 
 
 
 # change the NX authentication to that of sshd
