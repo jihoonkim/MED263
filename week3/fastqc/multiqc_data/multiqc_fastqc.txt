@@ -1,5 +1,0 @@
-Sample	adapter_content	Sequences flagged as poor quality	sequence_duplication_levels	avg_sequence_length	Encoding	per_base_sequence_quality	sequence_length_distribution	Sequence length	File type	basic_statistics	per_sequence_gc_content	Total Sequences	per_base_n_content	per_base_sequence_content	overrepresented_sequences	%GC	total_deduplicated_percentage	Filename	kmer_content	per_sequence_quality_scores
-SRR866442_1	pass	0.0	fail	151.0	Sanger / Illumina 1.9	pass	pass	151.0	Conventional base calls	pass	fail	1369123.0	pass	pass	warn	47.0	6.411038307	SRR866442_1.fastq.gz	fail	pass
-SRR866442_2	pass	0.0	fail	151.0	Sanger / Illumina 1.9	pass	pass	151.0	Conventional base calls	pass	fail	1369123.0	pass	pass	warn	47.0	7.23024885273	SRR866442_2.fastq.gz	fail	pass
-SRR948508_1	pass	0.0	fail	151.0	Sanger / Illumina 1.9	pass	pass	151.0	Conventional base calls	pass	fail	1242100.0	pass	pass	warn	48.0	6.38531519201	SRR948508_1.fastq.gz	fail	pass
-SRR948508_2	pass	0.0	fail	151.0	Sanger / Illumina 1.9	pass	pass	151.0	Conventional base calls	pass	warn	1242100.0	pass	pass	warn	48.0	7.25786973674	SRR948508_2.fastq.gz	fail	pass
