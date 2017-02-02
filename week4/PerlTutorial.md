@@ -30,8 +30,71 @@ nano test.pl
 cat test.pl
 ```
 
-#### Numbers
-```{perl, echo = TRUE }
-
-
+#### Hello world example
+```{bash, echo = TRUE }
+gedit hello.pl
 ```
+
+```{perl, echo = TRUE }
+#!/usr/bin/perl -w
+# Display a greeting
+print "Hello, Jihoon";
+exit;
+```
+
+```{bash, echo = TRUE }
+perl hello.pl
+```
+
+
+#### Display a variable
+```{bash, echo = TRUE }
+gedit dna.pl
+```
+
+```{perl, echo = TRUE }
+#!/usr/bin/perl -w
+
+# Store a DNA sequence into a variable called $DNA
+$DNA = "ACGGGACT";
+
+# Display a DNA sequence
+print $DNA;
+
+exit;
+```
+
+```{bash, echo = TRUE }
+perl dna.pl
+```
+
+
+#### Transcribe DNA to RNA
+```{bash, echo = TRUE }
+gedit transcribe.pl
+```
+
+```{perl, echo = TRUE }
+#!/usr/bin/perl -w
+
+# Store a DNA sequence into a variable called $DNA
+$DNA = "ACGGGACT";
+
+# Copy DNA as it is as a variable called $RNA
+$RNA = $DNA;
+
+# Replace Thymin (T) with Uracil (U)
+$RNA =~ s/T/U/g;
+
+# Display two sequences
+print "DNA = ", $DNA, "\n";
+print "After transcription\n";
+print "RNA = ", $RNA, "\n";
+
+exit;
+```
+
+```{bash, echo = TRUE }
+perl transcribe.pl
+```
+
