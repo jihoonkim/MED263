@@ -136,17 +136,25 @@ close $fh;
 exit;
 ```
 
-### Installl BioPerl
+### Install BioPerl, an open source Perl tools for bioinformatics
 ```{bash, echo = TRUE }
-git clone https://github.com/bioperl/bioperl-live.git
-cd bioperl-live
-perl Build.PL
-sudo ./Build install
+#git clone https://github.com/bioperl/bioperl-live.git
+#cd bioperl-live
+#perl Build.PL
+#sudo ./Build install
+
+sudo apt-get install -y bioperl
+sudo cpan Bio::Seq
 ```
 
 ### BLAST search of a mystery sequence 
 ```{bash, echo = TRUE }
+wget https://github.com/jihoonkim/MED263/raw/master/week4/mysterysequence.fasta
 wget https://github.com/jihoonkim/MED263/raw/master/week4/blast.pl
 perl blast.pl > blast.out
 head blast.out
 ```
+
+To see the source of this mystery sequence,
+search GenBank with AF011222.1, the top scoring accession number.
+https://www.ncbi.nlm.nih.gov/nuccore/2286205
