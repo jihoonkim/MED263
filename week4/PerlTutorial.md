@@ -136,7 +136,7 @@ close $fh;
 exit;
 ```
 
-### Install BioPerl, an open source Perl tools for bioinformatics
+### Install [BioPerl](http://bioperl.org/), an open source Perl tools for bioinformatics
 ```{bash, echo = TRUE }
 sudo apt-get install -y bioperl
 sudo cpan Bio::Seq
