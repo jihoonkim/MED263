@@ -125,8 +125,7 @@ table( pima$diabetes )
 
 ### Box plot
 ```{r, echo = TRUE}
-boxplot( gtt ~ diabetes, 
-         data = pima)
+boxplot( gtt ~ diabetes, data = pima)
 ```
 
 ### Box plot with added features
@@ -134,6 +133,7 @@ boxplot( gtt ~ diabetes,
 boxplot( gtt ~ diabetes, 
          data = pima, 
          boxwex = 0.3,
+         col = c("orange", "royalblue"),
          main = "Pima Indians Diabetes Study",
          ylab = "Glucose concentration", 
          xlab = "Diabetes")
@@ -145,6 +145,7 @@ boxplot( gtt ~ diabetes,
 case <- pima$gtt[ pima$diabetes == 1]
 control <- pima$gtt[ pima$diabetes == 0]
 t.test( case, control ) 
+t.test( case, control )$p.value
 ```
 
 ### Two group comparison, Diastolic blood pressure (DBP)
@@ -176,6 +177,11 @@ round( summary( m1 )$coef, 3)
 
 #### randomised trials of corticosteroid therapy in premature labour and its effect on neonatal death.
 ```{r, echo = TRUE}
+
+# install R package 'rmeta' in R Studio. 
+#    From the bottom-right window, 
+#         click 'Packages' --> 'Install' --> Install from 'Repository (CRAN)'
+#            type 'rmeta' in Packages
 library( rmeta )
 
 data( cochrane )
