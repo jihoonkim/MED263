@@ -138,14 +138,10 @@ exit;
 
 ### Install BioPerl, an open source Perl tools for bioinformatics
 ```{bash, echo = TRUE }
-#git clone https://github.com/bioperl/bioperl-live.git
-#cd bioperl-live
-#perl Build.PL
-#sudo ./Build install
-
 sudo apt-get install -y bioperl
 sudo cpan Bio::Seq
 ```
+Answer yes to during cpan run. Installing BioPerl takes several minutes.
 
 ### BLAST search of a mystery sequence 
 ```{bash, echo = TRUE }
