@@ -35,6 +35,9 @@ export PATH=$PATH:$PWD/bin
 #echo "export PATH=$PATH:$PWD/bin" >> ~/.bashrc
 echo "export PATH=$PATH:$PWD/bin" >> /etc/profile 
 
+# Change the ownership of homer directory
+chown -R $SUDO_USER:$SUDO_USER /opt/homer
+
 # create a "run" directory for analysis of example data
 mkdir -p /home/$SUDO_USER/run_chipseq
 cd /home/$SUDO_USER/run_chipseq
