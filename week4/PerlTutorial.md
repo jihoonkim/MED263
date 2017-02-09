@@ -17,7 +17,7 @@ used in bioinformatics.
 
 An application program to create, type, and edit text documents.
 We will use 'gedit' to edit Perl codes.
-You can use other editors (e.g. emachs, nano, sublime, vim) 
+You can use other editors (e.g. emacs, nano, sublime, vim) 
 your are familiar with.
 
 ```{bash, echo = TRUE }
@@ -138,10 +138,27 @@ exit;
 
 ### Install [BioPerl](http://bioperl.org/), an open source Perl tools for bioinformatics
 ```{bash, echo = TRUE }
-sudo apt-get install -y bioperl
-sudo cpan Bio::Seq
+https://www.biostars.org/p/193668/
+
+cpan local::lib
+
+
+git clone https://github.com/bioperl/bioperl-live.git
+cd bioperl-live/
+perl Build.PL 
+
+
+./Build installdeps
+./Build install
+
+
+
+PERL5LIB=${PERL5LIB}:/opt/bin/bioperl-1.6.1
+export PERL5LIB
+
+
 ```
-Answer yes to during cpan run. Installing BioPerl takes several minutes.
+Installing BioPerl takes several minutes.
 
 ### BLAST search of a mystery sequence 
 ```{bash, echo = TRUE }
