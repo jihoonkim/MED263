@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------
-# File: install_R_and_RStudio.sh
+# File: install_chipseq.sh
 # Author: Chris Benner 
-# Description: Install the software tools and data for CHiP-Seq data analysi
+# Description: Install the software tools and data for CHiP-Seq 
 # Date: 2/9/2017
 #-----------------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ export PATH=$PATH:$PWD/bin
 #echo "export PATH=$PATH:$PWD/bin" >> ~/.bashrc
 echo "export PATH=$PATH:$PWD/bin" >> /etc/profile 
 
-# return to home directory
+# create a "run" directory for analysis of example data
 mkdir -p /home/$SUDO_USER/run_chipseq
 cd /home/$SUDO_USER/run_chipseq
 
