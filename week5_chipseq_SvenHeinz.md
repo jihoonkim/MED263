@@ -24,12 +24,12 @@ unzip samfiles.zip
 
 The archive should contain the following SAM files that have been aligned to the mouse mm9 genome:
 
-h3k27ac-esc.chr17.2m.sam
-h3k4me2-esc.chr17.2m.sam
-input-esc.chr17.2m.sam
-klf4-esc.chr17.2m.sam
-oct4-esc.chr17.2m.sam
-sox2-esc.chr17.2m.sam
+* h3k27ac-esc.chr17.2m.sam
+* h3k4me2-esc.chr17.2m.sam
+* input-esc.chr17.2m.sam
+* klf4-esc.chr17.2m.sam
+* oct4-esc.chr17.2m.sam
+* sox2-esc.chr17.2m.sam
 
 These files are originally from the following study investigating the roles that reprogramming factors play when transforming MEF (fibroblasts) into embryonic stem cells.
 
