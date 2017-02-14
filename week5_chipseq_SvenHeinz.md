@@ -32,7 +32,9 @@ oct4-esc.chr17.2m.sam
 sox2-esc.chr17.2m.sam
 
 These files are originally from the following study investigating the roles that reprogramming factors play when transforming MEF (fibroblasts) into embryonic stem cells.
+
 [Chronis et al. Cooperative Binding of Transcription Factors Orchestrates Reprogramming](https://www.ncbi.nlm.nih.gov/pubmed/28111071)
+
 Sequencing Data: [GSE90893](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90893)
 
 For this tutorial we extracted the ChIP-seq experiments for several transcription factors and histone modifications performed ESC (embryonic stem cells).  To reduce runtimes, only reads that mapped to chr17 (and chr17_random) are included in the SAM files.
