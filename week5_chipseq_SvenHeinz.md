@@ -9,7 +9,12 @@ http://homer.ucsd.edu/homer/workshops/170209-MED263/
 ## Goal
 This tutorial will walk you through an example of ChIP-seq analysis using HOMER.  It starts with aligned SAM files (only reads from mouse chr17) and performs many of the basic analysis tasks that one might normally do when analyzing ChIP-seq data.
 
-## Download data
+
+## Step 0. Prerequisites
+Align FASTQ reads using bwa, bowtie2 or similar genome alignment algorithm.  This will produce a SAM or BAM file that can be analyzed using HOMER. The tutorial below also assumes HOMER is already installed and the mm9 genome is loaded.
+
+
+## Step 1. Download data
 Download the zip file containing SAM alignment files and unzip the archive.
 ```Shell
 wget -O samfiles.zip http://homer.ucsd.edu/homer/workshops/170209-MED263/samfiles.zip
@@ -33,7 +38,7 @@ For this tutorial we extracted the ChIP-seq experiments for several transcriptio
 
 
 
-## Create tag directories
+## Step 2. Create a tag directory
 
 Create a "tag directory" for the Oct4 ChIP-seq experiment using the makeTagDirectory command.  
 Tag directories are analogous to sorted bam files and are the starting point for most HOMER operations like finding peaks, creating visualization files, or calculating read densities. 
@@ -59,6 +64,8 @@ The command creates a new directory, in this case named "ESC-Oct4-mm9".  Inside 
 * tagCountDistribution.txt - number of reads appearing at the same positions.
 
 
+## Step 3. Create more tag directories
+
 Create tag directories for the input (control), Sox2, and H3K27ac ChIP-seq experiments similar to how the Oct4 tag directory was created.
 ```Shell
 makeTagDirectory ESC-Input-mm9 -genome mm9 -checkGC input-esc.chr17.2m.sam
@@ -70,7 +77,7 @@ At this point you should have 4 tag directories (including the ESC-Oct4-mm9 dire
 Feel free to look through the QC stats.
 
 
-## Create bedGraph files for visualization
+## Step 4. Create bedGraph files for visualization
 
 Next we will visualize the ChIP-seq experiments by creating bedGraph files from the tag directories and using the UCSC genome browser to look at the results.  We will do this using the makeUCSCfile command.  For most ChIP-seq experiments all you need to do is specify the tag directory and specify "-o auto" for the command to automatically save the bedGraph file inside the tag directory:
 ```Shell
@@ -91,6 +98,8 @@ This creates the file "ESC-Oct4-mm9/ESC-Oct4-mm9.ucsc.bedGraph.gz".  This file f
 
 Once the file finishes uploading, click go to go to the genome browser and start surfing the genome.  The read pileups will display the relative density of ChIP-seq reads at each position in the genome.  REMEMBER that we only have data for chr17 in this example, so stick to that chromosome.
 
+## Step 5. Create more bedGraph files 
+
 Create bedGraph files for the other tag directories and upload them to the genome browser.  Repeat step 4 for Sox2, Input, and H3K27ac:
 ```Shell
 makeUCSCfile ESC-Sox2-mm9 -o auto
@@ -101,7 +110,7 @@ makeUCSCfile ESC-H3K27ac-mm9 -o auto
 See if there are any interesting patterns in the data that catch your eye.  Try visiting the Pou5f1 locus (the gene for Oct4) by typing the gene name into the search bar at the top.  Once at the Pou5f1 locus, zoom out 10x to see if there any nearby sites that might resemble enhancers.
 
 
-## Find peaks
+## Step 6. Find peaks
 
 One of the most common tasks with ChIP-seq data is to find 'enriched' regions commonly called "peaks".  HOMER contains a command called findPeaks which is used to analyze tag directories for peaks.  There are two common ways to use the command:
 ```Shell
@@ -123,7 +132,7 @@ findPeaks ESC-Sox2-mm9 -i ESC-Input-mm9 -style factor -o auto
 findPeaks ESC-H3K27ac-mm9 -i ESC-Input-mm9 -style histone -o auto
 ```
 
-## Annotate peaks
+## Step 7. Annotate peaks
 
 Now that we have identified peaks from our ChIP-seq data, it is time to figure out more information about where they are and what genes they might be regulating.  HOMER contains a program called annotatePeaks.pl that performs a wide variety of functions using peak/BED files.  First, lets use it to perform basic annotation of the peak file.  The annotatePeaks.pl program works like this:
 ```Shell
@@ -138,7 +147,24 @@ annotatePeaks.pl ESC-Oct4-mm9/peaks.txt mm9 > oct4.annotation.txt
 If we open the "oct4.annotation.txt" file with a spreadsheet program/Excel, you'll see several annotation columns. Take note of the columns specifying the nearest gene TSS, the distance, and the annotation of the genomic region the peak is located in. This annotation is split into two separate columns - one is basic (i.e. exon, promoter, intergenic, intron etc.), and a more detailed annotation that describes CpG islands, repeat elements, etc.). You might have also noticed while the command was running that stats about annotation enrichment too.
 
 
-## Find DNA motifs
+## Step 8. Annotate more peaks
+
+The annotatePeaks.pl program can also be used to create histograms that display the relative read enrichment relative to given genomic features, including transcription start sites (TSS) or any other set of regions the user wants to define.  Since the TSS is so commonly used for this purpose, HOMER has a built-in annotation for TSS (based on RefSeq transcripts).  The key parameters to create a histogram are the "-hist #" and "-size #" options, which control the binning size and total length of the histogram.  The other important option is the "-d <tag directory>", which specifies which experiments to compile histograms for.  In general:
+```Shell
+annotatePeaks.pl <peak/BED file> <genome version> -size <#> -hist <#> -d <Tag Directory1> > output.txt
+```
+
+(note that the peak/BED file can be replaced with the key work "tss" to make a histogram at the TSS)
+To create a histogram will the experiments we've looked at so far near the TSS, run the following:
+```Shell
+annotatePeaks.pl tss mm9 -size 8000 -hist 10 -d ESC-Oct4-mm9/ ESC-Sox2-mm9/ ESC-H3K27ac-mm9/ ESC-Input-mm9/ > output.txt
+```
+
+Open the "output.txt" file with a spreadsheet program/Excel.  You'll notice that the first column gives the distance offsets from the TSS followed by columns corresponding to the 'coverage', '+ Tags', and '- Tags' for each experiment.  Try graphing each as X-Y line graph using the first column as the X-coordinate to see the patterns.
+
+
+
+## Step 9. Find DNA motifs
 
 DNA motif finding is a powerful technique to analyze ChIP-seq experiments.  Unlike gene expression data, ChIP-seq localizes signals to very specific regions of the genome allowing for accurate identification of the genetic signals responsible for recruiting various transcription factors.  To use HOMER's motif analysis program, run the findMotifsGenome.pl command using peak files from the experiments.  In general the command works like this:
 ```Shell
@@ -158,7 +184,7 @@ findMotifsGenome.pl ESC-Sox2-mm9/peaks.txt mm9r Motifs-Results-Sox2/ -size 100 -
 You might notice that both analyses indicate that Oct4 and Sox2 peaks in ESC are highly enriched for an OCT:SOX composite motif, which has been shown to be very important in establishing pluripotent enhancers.
 
 
-## Annotate peaks
+## Step 10. Annotate peaks
 
 Now that you've found the most enriched motifs in a ChIP-seq experiment, it is worth it to see where those motifs are located (i.e. which peaks, etc.). One of the key outputs from motif finding are "motif files", which contain the information needed to understand where the motif is located in the genome. For example, the top de novo motifs found during motif finding are located in the output directory in the homerResults/ directory.  To make it easier, lets copy to top Oct4 motif to the the file "topOct4.motif" in the main directory where we are executing these commands (alternatively you could save the motif file down from the HTML results):
 ```Shell
@@ -180,7 +206,7 @@ annotatePeaks.pl ESC-Oct4-mm9/peaks.txt mm9 -mbed topOct4.motifTrack.bed -m topO
 Now you can load the "topOct4.motifTrack.bed" file as a custom track in the UCSC genome browser just like we did in step 4 for bedGraph files.  In addition, the other output file "output.txt" will contain the peak annotation results with an additional column showing the peaks that contain the given motif.
 
 
-## Compare
+## Step 11. Compare
 
 Finally, we want to gain some experience comparing ChIP-seq experiments. At first pass it might make sense to make a Venn diagram comparing peaks from two experiments to see how many overlap. This is a horrible way to analyze ChIP-seq data!!! This is because many peaks are close to the threshold of detection, barely making the cut for statistical significance (or not) in one experiment or another.  A good practice is to create a scatter plot comparing the read counts between two experiments directly at all of the sites where there is signal (i.e. peaks).  To do this, first lets merge the peak files from the two experiments, collapsing peaks found that overlap:
 ```Shell
