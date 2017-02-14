@@ -187,7 +187,7 @@ findMotifsGenome.pl ESC-Sox2-mm9/peaks.txt mm9r Motifs-Results-Sox2/ -size 100 -
 You might notice that both analyses indicate that Oct4 and Sox2 peaks in ESC are highly enriched for an OCT:SOX composite motif, which has been shown to be very important in establishing pluripotent enhancers.
 
 
-## Step 10. Annotate peaks
+## Step 10. Find motif locations 
 
 Now that you've found the most enriched motifs in a ChIP-seq experiment, it is worth it to see where those motifs are located (i.e. which peaks, etc.). One of the key outputs from motif finding are "motif files", which contain the information needed to understand where the motif is located in the genome. For example, the top de novo motifs found during motif finding are located in the output directory in the homerResults/ directory.  To make it easier, lets copy to top Oct4 motif to the the file "topOct4.motif" in the main directory where we are executing these commands (alternatively you could save the motif file down from the HTML results):
 ```Shell
@@ -209,7 +209,7 @@ annotatePeaks.pl ESC-Oct4-mm9/peaks.txt mm9 -mbed topOct4.motifTrack.bed -m topO
 Now you can load the "topOct4.motifTrack.bed" file as a custom track in the UCSC genome browser just like we did in step 4 for bedGraph files.  In addition, the other output file "output.txt" will contain the peak annotation results with an additional column showing the peaks that contain the given motif.
 
 
-## Step 11. Compare
+## Step 11. Investigate differential peaks
 
 Finally, we want to gain some experience comparing ChIP-seq experiments. At first pass it might make sense to make a Venn diagram comparing peaks from two experiments to see how many overlap. This is a horrible way to analyze ChIP-seq data!!! This is because many peaks are close to the threshold of detection, barely making the cut for statistical significance (or not) in one experiment or another.  A good practice is to create a scatter plot comparing the read counts between two experiments directly at all of the sites where there is signal (i.e. peaks).  To do this, first lets merge the peak files from the two experiments, collapsing peaks found that overlap:
 ```Shell
