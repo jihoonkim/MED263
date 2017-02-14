@@ -4,6 +4,7 @@
 ---
 
 ##### Reference
+Adapted from the original tutorial written by Chris and Benner and Sven Heinz 
 http://homer.ucsd.edu/homer/workshops/170209-MED263/
 
 ## Goal
