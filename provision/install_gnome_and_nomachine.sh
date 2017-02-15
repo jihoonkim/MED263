@@ -28,8 +28,8 @@ mv /etc/pam.d/gdm-password /etc/pam.d/gdm-password-default
 cp /etc/pam.d/sshd /etc/pam.d/gdm-password
 
 # install NoMachine server
-wget http://download.nomachine.com/download/5.1/Linux/nomachine_5.1.62_1_amd64.deb
-dpkg -i nomachine_5.1.62_1_amd64.deb
+wget http://download.nomachine.com/download/5.1/Linux/nomachine_5.2.11_1_amd64.deb
+dpkg -i nomachine_5.2.11_1_amd64.deb
 
 # change the NX authentication to that of SSHD
 mv /etc/pam.d/nx  /etc/pam.d/nx-default
