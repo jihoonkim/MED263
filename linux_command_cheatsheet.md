@@ -26,6 +26,12 @@ wget ftp://ftp.ccb.jhu.edu/pub/data/bowtie_indexes/hg19.ebwt.zip
 sudo find / -type f -size +100M -print |  xargs du -s | sort -k 1 -nr  | head -n 20
 ```
 
+#### Intall Java and Juicebox, a Java application
+```Shell
+sudo apt-get install openjdk-8-jre
+wget https://s3.amazonaws.com/hicfiles.tc4ga.com/public/Juicebox.jar
+```
+
 #### Move a directory '/home/johndoe/week2run' to under '/tmp/workspace'
 ```Shell
 mv /home/johndoe/week2run /tmp/workspace
