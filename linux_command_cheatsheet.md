@@ -5,7 +5,9 @@
 #### Create a 'workspace' directory and change its owner to 'johndoe'
 ```Shell
 sudo mkdir /tmp/workspace
+ls -hl /tmp/workspace
 sudo chown johndoe:johndoe /tmp/workspace
+ls -hl /tmp/workspace
 cd /tmp/workspace
 ```
 
