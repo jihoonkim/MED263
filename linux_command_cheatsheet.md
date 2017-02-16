@@ -18,7 +18,7 @@ rm -rf /home/johndoe/week2run
 ```
 
 #### Create a 'workspace' directory and change its owner to 'johndoe'
-```Shell
+```bash
 sudo mkdir /tmp/workspace
 sudo chown johndoe:johndoe /tmp/workspace
 cd /tmp/workspace
