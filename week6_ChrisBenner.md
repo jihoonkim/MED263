@@ -103,7 +103,7 @@ Next we will visualize the experiments by creating bedGraph files from the tag d
 First, create a bedGraph file from the CTCF ChIP-seq experiment in the same manner that we did for the ChIP-seq exercise:
 ```Shell
 makeUCSCfile ESC-CTCF-mm9 -o auto
-``
+```
 
 This creates the file "ESC-CTCF-mm9/ESC-CTCF-mm9.ucsc.bedGraph.gz".  This file format specifies the normalized read depth at variable intervals along the genome (use zmore and the filename to view the file format for yourself). To view the file in the genome browser, do the following:
 
@@ -206,6 +206,6 @@ annotatePeaks.pl tss mm9 -size 600 -hist 5 -m topMotif.motif > motif.histogram.g
 
 Now lets switch gears and start looking at Hi-C data. One of the best programs available at the moment to view Hi-C data is a program called JuiceBox, created by the Lieberman-Aiden laboratory. To run JuiceBox (can be run locally from your own computer if you want), download the application or Java JAR file from the following site:
 ```Shell
-http://aidenlab.org/juicebox/
+firefox http://aidenlab.org/juicebox/
 ```
 During the class I will show you how to load data and auxiliary tracks, and how to compare data.
