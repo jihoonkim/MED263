@@ -4,8 +4,8 @@
 ---
 
 ##### Reference
-Adapted from the original tutorial written by Chris and Benner and Sven Heinz 
-http://homer.ucsd.edu/homer/workshops/170209-MED263/
+Adapted from the original tutorial written by [Chris Benner and Sven Heinz](http://homer.ucsd.edu/homer/workshops/170209-MED263/)
+
 
 ## Goal
 This tutorial will walk you through an example of ChIP-seq analysis using HOMER.  It starts with aligned SAM files (only reads from mouse chr17) and performs many of the basic analysis tasks that one might normally do when analyzing ChIP-seq data.
