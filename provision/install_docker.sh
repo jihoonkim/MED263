@@ -41,4 +41,4 @@ usermod -aG docker ${LOGNAME}
 service docker restart 
 
 # log out to enable newly added 'docker' group effective
-logout
+exit
