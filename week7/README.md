@@ -43,5 +43,5 @@ docker run -it -p 443:8888 -v $RNASEQ_HOME:/home/jovyan/work/notebooks ccbbatucs
 ```
 #### Copy and paste the URL provided in the terminal to the web browser replacing '172.1.2.3' with your VM IP address (similar to one below but with a different token name)
 ```Shell
-http://172.1.2.3:8888/?token=7b919daae88a9a43e6ef1a909b10aaf010f9f366559552b8
+http://172.1.2.3:443/?token=7b919daae88a9a43e6ef1a909b10aaf010f9f366559552b8
 ```
