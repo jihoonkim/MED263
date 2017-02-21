@@ -26,7 +26,8 @@ docker pull ccbbatucsd/rnaseq123-docker
 ```Shell
 mkdir ~/rnaseq
 RNASEQ_HOME=~/rnaseq
-docker run -it -e USERID=$UID -p 8888:8888 -v $RNASEQ_HOME:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
+sudo chown -R 1000:100 $RNASEQ_HOME
+docker run -it -p 8888:8888 -v $RNASEQ_HOME:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
 ```
 #### Copy and paste the URL provided in the terminal to the web browser (similar to one below but with a different token name)
 ```Shell
@@ -37,7 +38,8 @@ http://localhost:8888/?token=7b919daae88a9a43e6ef1a909b10aaf010f9f366559552b8
 ```Shell
 mkdir ~/rnaseq
 RNASEQ_HOME=~/rnaseq
-docker run -it -e USERID=$UID -p 443:8888 -v $RNASEQ_HOME:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
+sudo chown -R 1000:100 $RNASEQ_HOME
+docker run -it -p 443:8888 -v $RNASEQ_HOME:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
 ```
 #### Copy and paste the URL provided in the terminal to the web browser replacing '172.1.2.3' with your VM IP address (similar to one below but with a different token name)
 ```Shell
