@@ -7,6 +7,9 @@ ssh johndoe@172.1.2.3 -p xxxx
 ```
 
 ### In your iDASH-Cloud VM, create a working directory for RNA-Seq 
+```diff
++In your iDASH-Cloud VM
+```
 ```Shell
 mkdir ~/rnaseq
 RNASEQ_HOME=~/rnaseq
