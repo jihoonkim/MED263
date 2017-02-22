@@ -11,8 +11,8 @@ ssh johndoe@172.1.2.3 -p xxxx
 +In your iDASH-Cloud VM
 ```
 ```Shell
-mkdir ~/rnaseq
-RNASEQ_HOME=~/rnaseq
+mkdir /home/johndoe/rnaseq
+RNASEQ_HOME=/home/johndoe/rnaseq
 cd $RNASEQ_HOME
 ```
 
@@ -35,7 +35,7 @@ docker pull ccbbatucsd/rnaseq123-docker
 
 ### In your iDASH-Cloud VM, run the RNA-Seq docker and access the Jupyter within the VM
 ```Shell
-RNASEQ_HOME=~/rnaseq
+RNASEQ_HOME=/home/johndoe/rnaseq
 sudo chown -R 1000:100 $RNASEQ_HOME
 docker run -it -p 8888:8888 -v $RNASEQ_HOME:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
 ```
@@ -47,7 +47,7 @@ http://localhost:8888/?token=7b919daae88a9a43e6ef1a909b10aaf010f9f366559552b8
 
 ### In your iDASH-Cloud VM, run the RNA-Seq docker and access the Jupyter from outside the VM (Optional and discouraged due to browser caching attack/risk. Do this only if the localhost access above does not work.)
 ```Shell
-RNASEQ_HOME=~/rnaseq
+RNASEQ_HOME=/home/johndoe/rnaseq
 sudo chown -R 1000:100 $RNASEQ_HOME
 docker run -it -p 443:8888 -v $RNASEQ_HOME:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
 ```
