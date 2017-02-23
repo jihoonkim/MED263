@@ -26,6 +26,11 @@ wget ftp://ftp.ccb.jhu.edu/pub/data/bowtie_indexes/hg19.ebwt.zip
 sudo find / -type f -size +100M -print |  xargs du -s | sort -k 1 -nr  | head -n 20
 ```
 
+#### Get the secret token of Jupyter Notebook from the latest Docker container
+```Shell
+docker exec -it `docker ps -l -q` jupyter notebook list
+```
+
 #### Intall Java and Juicebox, a Java application
 ```Shell
 sudo apt-get install openjdk-8-jre
