@@ -31,7 +31,7 @@ sudo find / -type f -size +100M -print |  xargs du -s | sort -k 1 -nr  | head -n
 docker exec -it `docker ps -l -q` jupyter notebook list
 ```
 
-#### Intall Java and Juicebox, a Java application
+#### Install Java and Juicebox, a Java application
 ```Shell
 sudo apt-get install openjdk-8-jre
 wget https://s3.amazonaws.com/hicfiles.tc4ga.com/public/Juicebox.jar
@@ -45,4 +45,9 @@ mv /home/johndoe/week2run /tmp/workspace
 #### Report the disk space usage
 ```Shell
 df -h
+```
+
+### Start running a docker container for RNA-Seq Jupyter Notebook server
+```Shell
+docker run -it -p 443:8888 -v /home/johndoe/rnaseq:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
 ```
