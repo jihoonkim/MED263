@@ -47,7 +47,8 @@ mv /home/johndoe/week2run /tmp/workspace
 df -h
 ```
 
-### Start running a docker container for RNA-Seq Jupyter Notebook server
+### Start running a docker container as a daemon process 
 ```Shell
-docker run -it -p 443:8888 -v /home/johndoe/rnaseq:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
+docker run -d -p 443:8888 -v /home/johndoe/rnaseq:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
+docker exec -it `docker ps -l -q` jupyter notebook list
 ```
