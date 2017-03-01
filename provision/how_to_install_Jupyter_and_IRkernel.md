@@ -23,4 +23,7 @@ IRkernel::installspec()
 jupyter notebook
 ```
 
-#### In Jupyter notebook browser (http://localhost:8888), select New, then R.
+#### In a web browser, 
+- go to http://localhost:8888
+- select New
+- select R
