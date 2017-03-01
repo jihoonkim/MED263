@@ -27,3 +27,9 @@ jupyter notebook
 - go to http://localhost:8888
 - select New
 - select R
+
+#### For a remote access, in terminal, start the jupyter notebook with a specific port number
+ ```Shell
+jupyter notebook --port 443
+```
+- go to http://172.3.4.5:443
