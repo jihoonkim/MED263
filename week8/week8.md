@@ -6,7 +6,7 @@
 # In your VM
 
 ### Start R and run the following scripts
-```Shell
+```R
 devtools::install_github('IRkernel/IRkernel')
 IRkernel::installspec()
 ```
