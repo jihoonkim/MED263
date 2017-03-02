@@ -6,7 +6,7 @@ apt-get upgrade -y
 apt-get update -y 
 
 # install dependent packages
-apt-get install -ylibcurl4-openssl-dev libssl-dev
+apt-get install -y libcurl4-openssl-dev libssl-dev
 
 # download and install Anaconda
 wget https://repo.continuum.io/archive/Anaconda2-4.3.0-Linux-x86_64.sh
