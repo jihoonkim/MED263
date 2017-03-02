@@ -12,6 +12,10 @@ sudo apt-get install libcurl4-openssl-dev libssl-dev
 wget https://repo.continuum.io/archive/Anaconda2-4.3.0-Linux-x86_64.sh
 bash Anaconda2-4.3.0-Linux-x86_64.sh
 ```
+#### In terminal, run source to make the path effective
+```Shell
+source ~/.bashrc
+```
 
 #### In terminal, start R 
 ```Shell
@@ -23,11 +27,6 @@ R
 options(repos = c(CRAN = "http://cran.cnr.berkeley.edu/"))
 install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid','digest'))
 devtools::install_github('IRkernel/IRkernel')
-```
-
-#### In terminal, run source to make the path effective
-```Shell
-source ~/.bashrc
 ```
 
 #### In R, make the kernel available to Jupyter
