@@ -46,3 +46,9 @@ ssh -f -N -L 8888:localhost:8888 j5kim@172.21.53.19 -p 9221
 ```Shell
 http://localhost:8888
 ```
+
+### Check which port number is already occupied and, to release it, kill the process ID '1234'
+```Shell
+ps -ax | grep ssh | grep localhost
+kill  1234
+```
