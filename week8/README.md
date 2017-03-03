@@ -7,6 +7,9 @@
 
 ### Start R and run the following scripts
 ```R
+myRepo = "http://cran.cnr.berkeley.edu/"
+options(repos = c(CRAN = myRepo))
+install.packages(c("igraph", "NetIndices"))
 devtools::install_github('IRkernel/IRkernel')
 IRkernel::installspec()
 ```
