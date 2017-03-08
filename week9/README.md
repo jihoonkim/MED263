@@ -3,7 +3,7 @@
 
 ---
 
-## How to install Gneiss 
+## Part 1: How to install Gneiss 
 
 ### install conda
 ```Shell
@@ -25,7 +25,7 @@ source activate gneiss_env
 
 ---
 
-## How to run CFstudy microbiome project (in your remote VM)
+## Part 2: How to run CFstudy microbiome project (in your remote VM)
 
 ### make a workspace directory
 ```Shell
@@ -47,7 +47,7 @@ jupyter notebook cfstudy.ipynb
 
 ----
 
-## How to access the running Jupyter notebook in a remote VM from your laptop computer
+## Part 3. How to access the running Jupyter notebook in a remote VM from your laptop computer
 
 ### Establish a SSH tunnel to your remote VM from your local laptop computer.
 ```Shell
