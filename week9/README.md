@@ -25,9 +25,9 @@ source activate gneiss_env
 
 ---
 
-## How to run CFstudy (in your remote VM)
+## How to run CFstudy microbiome project (in your remote VM)
 
-### make a workspace directoryt
+### make a workspace directory
 ```Shell
 mkdir ~/microbiome
 cd ~/microbiome
