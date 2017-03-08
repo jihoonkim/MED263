@@ -47,7 +47,7 @@ jupyter notebook cfstudy.ipynb
 
 ----
 
-## Part 3. How to access the running Jupyter notebook in a remote VM from your laptop computer
+## Part 3: How to access the running Jupyter notebook in a remote VM from your laptop computer
 
 ### Establish a SSH tunnel to your remote VM from your local laptop computer.
 ```Shell
