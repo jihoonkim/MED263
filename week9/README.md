@@ -13,6 +13,10 @@ chmod a+x Miniconda3-latest-Linux-x86_64.sh
 source ~/.bashrc
 ```
 
+---
+
+## Part 2: How to run CFstudy microbiome project (in your remote VM)
+
 ### create a gneiss environment
 ```Shell
 conda create -n gneiss_env python=3.5 gneiss -c biocore -c qiime2
@@ -22,10 +26,6 @@ conda create -n gneiss_env python=3.5 gneiss -c biocore -c qiime2
 ```Shell
 source activate gneiss_env
 ```
-
----
-
-## Part 2: How to run CFstudy microbiome project (in your remote VM)
 
 ### make a workspace directory
 ```Shell
