@@ -46,7 +46,7 @@ wget https://github.com/biocore/gneiss/blob/master/ipynb/cfstudy/otu_table.biom?
 jupyter notebook cfstudy.ipynb
 ```
 
-----
+---
 
 ## Part 3: Start Jupyter notebook in a remote VM from your laptop computer
 
@@ -64,5 +64,14 @@ http://localhost:8888
 ```Shell
 kill $(ps -aux | grep ssh | grep localhost |  awk '{ print $2 }')
 ```
+
+----
+
+### References
+
+- [Anaconda/Conda](https://www.continuum.io/)
+- [Gneiss tool](https://biocore.github.io/gneiss/)
+- Morton et al. mSystems 2017. [PMID: 28144630](https://www.ncbi.nlm.nih.gov/pubmed/28144630)
+- [Qiime](http://qiime.org/)
 
 
