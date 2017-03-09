@@ -62,7 +62,7 @@ http://localhost:8888
 
 ### Check which port number is already occupied and, to release it, kill the process ID, e.g. '1234'
 ```Shell
-kill $(ps -aux | grep ssh | grep localhost |  awk '{ print $2 }')
+kill $(ps -ax | grep ssh | grep localhost |  awk '{ print $2 }')
 ```
 
 ----
