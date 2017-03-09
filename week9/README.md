@@ -3,7 +3,7 @@
 
 ---
 
-## Part 1: How to install Gneiss 
+## Part 1: Install Gneiss 
 
 ### install conda
 ```Shell
@@ -13,14 +13,15 @@ chmod a+x Miniconda3-latest-Linux-x86_64.sh
 source ~/.bashrc
 ```
 
----
-
-## Part 2: How to run CFstudy microbiome project (in your remote VM)
-
 ### create a gneiss environment
 ```Shell
 conda create -n gneiss_env python=3.5 gneiss -c biocore -c qiime2
 ```
+
+---
+
+## Part 2: Run CFstudy microbiome project (in your remote VM)
+
 
 ### activate the gneiss environment
 ```Shell
@@ -47,7 +48,7 @@ jupyter notebook cfstudy.ipynb
 
 ----
 
-## Part 3: How to access the running Jupyter notebook in a remote VM from your laptop computer
+## Part 3: Start Jupyter notebook in a remote VM from your laptop computer
 
 ### Establish a SSH tunnel to your remote VM from your local laptop computer.
 ```Shell
@@ -61,8 +62,7 @@ http://localhost:8888
 
 ### Check which port number is already occupied and, to release it, kill the process ID, e.g. '1234'
 ```Shell
-ps -ax | grep ssh | grep localhost
-kill  1234
+kill $(ps -aux | grep ssh | grep localhost |  awk '{ print $2 }')
 ```
 
 
