@@ -35,7 +35,8 @@ Email a final project report pdf file to Henry Huang (yih108@eng.ucsd.edu) by
 
 Visit following repositories to find the data:
 
-- [DRYAD](http://datadryad.org)
+- all different kinds of data in [DRYAD](http://datadryad.org)
+- data published by [Broad Institute](https://www.broadinstitute.org/data-software-and-tools)
 - gene expression data in [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo)
 - nucleotide data in [European Nucleotide Archive](http://www.ebi.ac.uk/ena)
 - public genome data in [Personal Genome Project](http://www.personalgenomes.org)
