@@ -41,4 +41,4 @@ Visit following repositories to find the data:
 - nucleotide data in [European Nucleotide Archive](http://www.ebi.ac.uk/ena)
 - public genome data in [Personal Genome Project](http://www.personalgenomes.org)
 - public genome data in [The International Genome Sample Resource](http://www.internationalgenome.org)
-- proteomics data in [PRIDE PRoteomics IDENtification](http://www.ebi.ac.uk/pride/archive)
+- proteomics data in [PRIDE PRoteomics IDEntification](http://www.ebi.ac.uk/pride/archive)
