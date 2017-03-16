@@ -31,11 +31,11 @@ make install
 
 
 # install bedtools
-apt-get install bedtools
+apt-get install -y bedtools
 
 
 # install python scipy: https://www.scipy.org/install.html 
-apt-get install python-numpy python-scipy 
+apt-get install -y python-numpy python-scipy 
 
 
 # install IGV (run the following as a student username)
