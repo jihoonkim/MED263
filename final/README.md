@@ -21,7 +21,8 @@ Email a final project report pdf file to Henry Huang (yih108@eng.ucsd.edu) by
 - You can re-organize one of the how-to-style journal articles in MED263 final project [sign-up sheet](http://bit.ly/2017med263final) or replicate one of MED263 course with different data and software tools.
 - You will submit a technical report in pdf format.
 - The final project report will have sections of Introduction, Data, Methods/Results, and References. (Unlike typical journal, you will combine Methods and Results into one section.)
-- Methods/Results section will have instruction, code, results (numbers/tables/figure), homework-style questions, and homework-style answers
+- Methods/Results section will have instruction, code, results (numbers/tables/figure), homework-style questions, and homework-style answers.
+- There is no page limit.
 - The example final project report (.pdf) can be found at [MED263 class GitHub](https://github.com/jihoonkim/MED263/blob/master/final/MED263_final_project_example.pdf).
 
 
