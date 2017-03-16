@@ -5,7 +5,9 @@
 
 ## Submission deadline
 
+```diff
 - Sunday 11:59 pm March 26, 2017
+```
 - Email a final project report pdf file to Henry Huang (yih108@eng.ucsd.edu) 
 
 
