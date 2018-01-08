@@ -1,16 +1,24 @@
 # Docker Tutorial
 
+#### Operating System
+An **operating system (OS)** is system software that manages computer hardware and software resources and provides common services for computer programs.
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/500px-Operating_system_placement.svg.png)
+
+**Quiz**
+What is the market share of linux in the Desktop platform (in December, 2017)?
+Find it out in [StatCounter](http://gs.statcounter.com/os-market-share).
+
 #### Bioinformatics and Linux
 * Bioinformatics relies heavily on Linux-based computers (hardware) and software.
 * Although many bioinformatics software tools are compiled on Mac OS and Windows,
 it is more conveneint to install and use the software on a Linux system.
 
 
-#### What is Docker?
+#### Docker?
 Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.
 
 
-### Key benefit of Docker
+#### Key benefit of Docker
 * The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development. 
 * Unlike virtual machines, containers do not have the high overhead and hence enable more efficient usage of the underlying system and resources.
 
@@ -53,12 +61,10 @@ https://store.docker.com/search?offering=community&q=&type=edition
 ```bash
 $ docker run hello-world
 ```
-4. Docker installation success if you see the outputs like the one below
+4. Docker installation is success if you see the outputs like the one below
 ```bash
 Hello from Docker!
 This message shows that your installation appears to be working correctly
-
-
 To generate this message, Docker took the following steps:
  1. The Docker client contacted the Docker daemon.
  2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
