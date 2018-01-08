@@ -6,7 +6,9 @@ An **operating system (OS)** is system software that manages computer hardware a
 
 **Quiz**
 What is the market share of linux in the Desktop platform (in December, 2017)?
-Find it out in [StatCounter](http://gs.statcounter.com/os-market-share).
+
+<div id="desktop-os_combined-ww-monthly-201612-201712" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="http://gs.statcounter.com/os-market-share/desktop/worldwide">StatCounter Global Stats - OS Market Share</a></p><script type="text/javascript" src="http://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="http://gs.statcounter.com/chart.php?desktop-os_combined-ww-monthly-201612-201712&chartWidth=600"></script>
+
 
 ### Bioinformatics and Linux
 * Bioinformatics relies heavily on Linux-based computers (hardware) and software.
