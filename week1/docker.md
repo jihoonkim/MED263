@@ -5,9 +5,8 @@ An **operating system (OS)** is system software that manages computer hardware a
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/500px-Operating_system_placement.svg.png)
 
 **Quiz**
-What is the market share of linux in the Desktop platform (in December, 2017)?
-
-![](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
+What is the market share of linux in the Desktop platform?
+Find it in the [StatCounter](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
 
 
 
