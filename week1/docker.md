@@ -1,4 +1,6 @@
-# Tutorial: Docker and linux 
+# Tutorial: Docker and linux
+[TOC]
+
 
 ### Operating System
 An **operating system (OS)** is system software that manages computer hardware and software resources and provides common services for computer programs.
@@ -6,7 +8,8 @@ An **operating system (OS)** is system software that manages computer hardware a
 
 **Quiz**
 What is the market share of linux in the Desktop platform?
-Find it in the [StatCounter](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
+Find it in the
+@[StatCounter](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
 
 
 ### Bioinformatics and Linux
@@ -183,7 +186,7 @@ ls -hl variants
 apt-get install vim
 vim myfile.txt
 ```
-**Homework**: Read and follow the [Interactive VIM tutorial](http://www.openvim.com/tutorial.html) at home by next class.
+**Homework**: Read and follow the [Interactive VIM tutorial](http://www.openvim.com/tutorial.html).  We will cover the earlier part during the class, but be sure to finish the rest at home by next class.
 
 
 
