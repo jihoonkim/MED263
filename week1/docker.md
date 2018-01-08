@@ -1,4 +1,4 @@
-# Docker Tutorial
+# Tutorial: Docker and linux 
 
 ### Operating System
 An **operating system (OS)** is system software that manages computer hardware and software resources and provides common services for computer programs.
@@ -7,7 +7,6 @@ An **operating system (OS)** is system software that manages computer hardware a
 **Quiz**
 What is the market share of linux in the Desktop platform?
 Find it in the [StatCounter](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
-
 
 
 ### Bioinformatics and Linux
@@ -64,7 +63,7 @@ https://store.docker.com/search?offering=community&q=&type=edition
 $ docker run hello-world
 ```
 4. Docker installation is success if you see the outputs like the one below
-```bash
+```
 Hello from Docker!
 This message shows that your installation appears to be working correctly
 To generate this message, Docker took the following steps:
@@ -77,7 +76,124 @@ To generate this message, Docker took the following steps:
     to your terminal.
 ```
 
-### Test
+
+
+### iAdmix Test
+Given the called variant file, we want to estimate the ancestry of this individual.
+```bash
+docker run -ti j5kim/iadmix:latest /bin/bash /testrun/testrun.sh
+```
+Test run is success if the last line of final ouput:
+```
+/testrun/HG001_chr22.vcf.INTEGRATION.input.ancestry, has the following allele frequencies
+MKK:0.1887 CEU:0.8113 FINAL_NZ_PROPS
+```
+
+[Bansal et al. BMC Bioinfo 2015
+Fast individual ancestry inference from DNA sequence data leveraging allele frequencies for multiple populations. PMID: 25592880](https://www.ncbi.nlm.nih.gov/pubmed/25592880)
+
+### Ubuntu docker
+Start running a ubuntu docker
+```bash
+docker run -ti ubuntu
+```
+
+
+### Basic linux commands
+1. Update the Ubuntu packages
+```bash
+apt-get update
+```
+
+2. Display the current directory
+```bash
+pwd
+```
+
+3. Change to a different directory and check if the current directory has been changed
+```bash
+cd /home
+pwd
+```
+
+4. Try downloading the external file
+```bash
+wget https://github.com/jihoonkim/dockerhub-iadmix/blob/master/HG001_chr22.vcf.gz
+```
+
+5. Install missing package **wget** first and try again downloading the file
+```bash
+apt-get install wget
+wget https://github.com/jihoonkim/dockerhub-iadmix/raw/master/HG001_chr22.vcf.gz
+```
+
+6. Display the file size, owner, file creation time and other file-related info
+```bash
+ls -hl
+```
+
+7. Try extracting the compressed file in .gz format while keeping the original file
+```bash
+gunzip -k HG001_chr22.vcf.gz
+```
+
+8. Install missing package **zip** first and try again extracting the file
+```bash
+apt-get install zip
+gunzip -k HG001_chr22.vcf.gz
+ls -hl
+```
+
+9. Get the number of lines in .vcf file (It should be 46162)
+```bash
+wc -l HG001_chr22.vcf
+```
+
+10. Print the last 10 lines of the .vcf file
+```bash
+tail -n 10 HG001_chr22.vcf
+```
+
+11. Search the line containing the SNP with RSID rs2401506.
+```bash
+grep rs2401506 HG001_chr22.vcf
+```
+
+12. Create your own directory
+```bash
+mkdir variants
+ls -hl
+```
+
+13. Copy a file
+```bash
+cp HG001_chr22.vcf testcopy.vcf
+ls -hl
+```
+
+14. Move a file to another directory
+```bash
+mv testcopy.vcf variants
+ls -hl
+ls -hl variants
+```
+
+15. Install VIM editor and start using it
+```bash
+apt-get install vim
+vim myfile.txt
+```
+**Homework**: Read and follow the [Interactive VIM tutorial](http://www.openvim.com/tutorial.html) at home by next class.
+
+
+
+### More docker commands
+
+```bash
+docker images
+```
+
+
 
 
 
