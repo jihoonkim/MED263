@@ -13,7 +13,7 @@ This elective course will cover the latest advances in bioinformatics in the con
 * TA: Andre Fonseca Faustino (affaustino@ucsd.edu)
 * Place: Room 304, Medical Education Telemedicine (MET) building
 * Time: 2-3:30 pm, Tuesdays and Thursdays (Jan 9 - Mar 8, 2018)
-* Grading: Homework 40%, Final presentation/report 60% (no mid-term)
+* Grading: Homework 60%, Final presentation/report 40% (no mid-term)
 
 ## Dates
 * Class start date: Tuesday January 9, 2018
