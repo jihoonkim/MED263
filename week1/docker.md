@@ -1,5 +1,5 @@
 # Tutorial: Docker and linux
-[[TOC]]
+[TOC]
 
 
 ### Operating System
@@ -7,10 +7,10 @@ An **operating system (OS)** is system software that manages computer hardware a
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/500px-Operating_system_placement.svg.png)
 
 **Quiz 1**: What is the market share of linux in the Desktop platform?
-Find it in the @[StatCounter](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
+Find it out from @[StatCounter](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
 
 **Quiz 2**: What kind of OS (and web browser) are you using?
-Find it out at [WhatIsMyBrowser](https://www.whatismybrowser.com)
+Find it from [WhatIsMyBrowser](https://www.whatismybrowser.com)
 
 
 ### Bioinformatics and Linux
@@ -19,7 +19,7 @@ Find it out at [WhatIsMyBrowser](https://www.whatismybrowser.com)
 it is more conveneint to install and use the software on a Linux system.
 
 
-### Docker?
+### Docker
 Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.
 
 
@@ -58,6 +58,15 @@ https://store.docker.com/search?offering=community&q=&type=edition
 ![](https://i.stack.imgur.com/tNksn.jpg)
 5. Save and Exit
 
+### Docker version
+**Quiz 3**: What is the Docker version installed in your computer?
+Do you have the most recent version?
+
+Find it the terminal or Power Shell:
+```bash
+docker --version
+```
+
 
 ### Hello World Test
 1. Click **Docker Quickstart** icon to start Docker
@@ -81,19 +90,16 @@ To generate this message, Docker took the following steps:
 ```
 
 
-
 ### iAdmix Test
 Given the called variant file, we want to estimate the ancestry of this individual.
 ```bash
 docker run -ti j5kim/iadmix:latest /bin/bash /testrun/testrun.sh
 ```
-Test run is success if the last line of final ouput:
-```
-/testrun/HG001_chr22.vcf.INTEGRATION.input.ancestry, has the following allele frequencies
-MKK:0.1887 CEU:0.8113 FINAL_NZ_PROPS
-```
 
-Bansal et al. BMC Bioinfo 2015
+**Quiz 4**: What is the ancestry of this individual? Report the estimated admixture proportions.
+Consult the [HapMap3](http://www.sanger.ac.uk/resources/downloads/human/hapmap3.html) to spell out the population acronyms.
+
+Source: Bansal et al. BMC Bioinfo 2015
 Fast individual ancestry inference from DNA sequence data leveraging allele frequencies for multiple populations. [PMID: 25592880](https://www.ncbi.nlm.nih.gov/pubmed/25592880)
 
 ### Ubuntu docker
@@ -102,6 +108,11 @@ Start running a ubuntu docker
 docker run -ti ubuntu
 ```
 
+**Quiz 5**: What is the version of Ubuntu? What is its codename?
+Find it out from the docker terminal:
+```bash
+cat /etc/lsb-release
+```
 
 ### Basic linux commands
 1. Update the Ubuntu packages
@@ -120,7 +131,7 @@ cd /home
 pwd
 ```
 
-4. Try downloading the external file
+4. Try downloading an external file
 ```bash
 wget https://github.com/jihoonkim/dockerhub-iadmix/blob/master/HG001_chr22.vcf.gz
 ```
@@ -130,61 +141,74 @@ wget https://github.com/jihoonkim/dockerhub-iadmix/blob/master/HG001_chr22.vcf.g
 apt-get install wget
 wget https://github.com/jihoonkim/dockerhub-iadmix/raw/master/HG001_chr22.vcf.gz
 ```
-
-6. Display the file size, owner, file creation time and other file-related info
+**Quiz 6**: What is the file size of downloade file HG001_chr22.vcf.gz?
+Find it out from the docker terminal:
 ```bash
 ls -hl
 ```
 
-7. Try extracting the compressed file in .gz format while keeping the original file
+6. Try extracting the compressed file in .gz format while keeping the original file
 ```bash
 gunzip -k HG001_chr22.vcf.gz
 ```
 
-8. Install missing package **zip** first and try again extracting the file
+7. Install missing package **zip** first and try again extracting the file
 ```bash
 apt-get install zip
 gunzip -k HG001_chr22.vcf.gz
 ls -hl
 ```
-
-9. Get the number of lines in .vcf file
+**Quiz 7**: What is the compression ratio of gz with the file HG001_chr22.vcf?
+Find it out from the docker terminal:
 ```bash
-wc -l HG001_chr22.vcf
+ls -hl
 ```
 
-10. Print the last 10 lines of the .vcf file
+8. Print the last ten lines of the .vcf file
 ```bash
 tail -n 10 HG001_chr22.vcf
 ```
+**Quiz 8**: What is the the number of lines in .vcf file HG001_chr22.vcf?
+Find it out from the docker terminal:
+```bash
+wc -l HG001_chr22.vcf
+```
+**Quiz 9**: What is the the md5 value of the last ten lines of the file HG001_chr22.vcf?
+Find it out from the docker terminal:
+```bash
+tail -n 10 HG001_chr22.vcf | md5sum
+```
 
-**Quiz 3**: How many lines does the file HG001_chr22.vcf have?
-
-11. Search the line containing the SNP with RSID rs2401506.
+9. Search the line containing the SNP with RSID rs2401506.
 ```bash
 grep rs2401506 HG001_chr22.vcf
 ```
+**Quiz 10**: What are the reference allels and alternative alleles of SNP rs2401506 in this .vcf file?
+Find it out from the docker terminal:
+```bash
+tail -n 10 HG001_chr22.vcf | md5sum
+```
 
-12. Create your own directory
+10. Create your own directory
 ```bash
 mkdir variants
 ls -hl
 ```
 
-13. Copy a file
+11. Copy a file
 ```bash
 cp HG001_chr22.vcf testcopy.vcf
 ls -hl
 ```
 
-14. Move a file to another directory
+12. Move a file to another directory
 ```bash
 mv testcopy.vcf variants
 ls -hl
 ls -hl variants
 ```
 
-15. Install VIM editor and start using it
+13. Install VIM editor and start using it
 ```bash
 apt-get install vim
 vim myfile.txt
@@ -210,8 +234,7 @@ from Mayo Clinic, and import it into the VCF-miner
 
 4. Analyze and apply filters (SAVANT_IMPACT HIGH and ACMG_gene_names) to find
 two genes.
-
-**Quiz 4**: Which two genes are found after applying above filters to NA12878.trio.vcf.gz?
+**Quiz 11**: Which two genes survived above filters with NA12878.trio.vcf.gz?
 
 
 ### More docker commands
