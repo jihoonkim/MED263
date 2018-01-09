@@ -6,12 +6,10 @@
 An **operating system (OS)** is system software that manages computer hardware and software resources and provides common services for computer programs.
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/500px-Operating_system_placement.svg.png)
 
-**Quiz 1**
-What is the market share of linux in the Desktop platform?
+**Quiz 1**: What is the market share of linux in the Desktop platform?
 Find it in the @[StatCounter](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
 
-**Quiz 2**
-What kind of OS (and web browser) are you using?
+**Quiz 2**: What kind of OS (and web browser) are you using?
 Find it out at [WhatIsMyBrowser](https://www.whatismybrowser.com)
 
 
@@ -150,7 +148,7 @@ gunzip -k HG001_chr22.vcf.gz
 ls -hl
 ```
 
-9. Get the number of lines in .vcf file (It should be 46162)
+9. Get the number of lines in .vcf file
 ```bash
 wc -l HG001_chr22.vcf
 ```
@@ -159,6 +157,8 @@ wc -l HG001_chr22.vcf
 ```bash
 tail -n 10 HG001_chr22.vcf
 ```
+
+**Quiz 3**: How many lines does the file HG001_chr22.vcf have?
 
 11. Search the line containing the SNP with RSID rs2401506.
 ```bash
@@ -209,7 +209,9 @@ Password: temppass
 from Mayo Clinic, and import it into the VCF-miner
 
 4. Analyze and apply filters (SAVANT_IMPACT HIGH and ACMG_gene_names) to find
-two genes; DSP and RYR1.
+two genes.
+
+**Quiz 4**: Which two genes are found after applying above filters to NA12878.trio.vcf.gz?
 
 
 ### More docker commands
