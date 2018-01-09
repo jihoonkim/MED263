@@ -93,8 +93,8 @@ Test run is success if the last line of final ouput:
 MKK:0.1887 CEU:0.8113 FINAL_NZ_PROPS
 ```
 
-[Bansal et al. BMC Bioinfo 2015
-Fast individual ancestry inference from DNA sequence data leveraging allele frequencies for multiple populations. PMID: 25592880](https://www.ncbi.nlm.nih.gov/pubmed/25592880)
+Bansal et al. BMC Bioinfo 2015
+Fast individual ancestry inference from DNA sequence data leveraging allele frequencies for multiple populations. [PMID: 25592880](https://www.ncbi.nlm.nih.gov/pubmed/25592880)
 
 ### Ubuntu docker
 Start running a ubuntu docker
@@ -237,6 +237,6 @@ docker images
 
 
 
-### Reference
+### References
 https://docs.docker.com/get-started/
 https://docker-curriculum.com/
