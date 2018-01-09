@@ -66,7 +66,7 @@ https://store.docker.com/search?offering=community&q=&type=edition
 2. Open a terminal and type
 3. Open a terminal and type the following command
 ```bash
-$ docker run hello-world
+docker run hello-world
 ```
 4. Docker installation is success if you see the outputs like the one below
 ```
@@ -193,12 +193,44 @@ vim myfile.txt
 
 
 
-### More docker commands
+### Variant prioritization with VCF-miner
+1. Start running vcf-miner docker
+```bash
+docker run -d -p 8888:8080 stevenhart/vcf-miner
+```
 
+2. Open a browser to http://localhost:8888/vcf-miner/
+```
+Username: Admin
+Password: temppass
+```
+
+3. Download an example vcf file, [NA12878.trio.vcf.gz](http://bioinformaticstools.centralus.cloudapp.azure.com/research/vcf-miner-sample-vcfs)
+from Mayo Clinic, and import it into the VCF-miner
+
+4. Analyze and apply filters (SAVANT_IMPACT HIGH and ACMG_gene_names) to find
+two genes; DSP and RYR1.
+
+
+### More docker commands
+Show running containers
+```bash
+docker ps
+```
+
+Stop running containers
+```bash
+docker stop
+```
+
+Show all containers
+```bash
+docker ps -a
+```
+Show all docker images
 ```bash
 docker images
 ```
-
 
 
 
