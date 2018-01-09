@@ -30,8 +30,8 @@ Following are important functions of an OS
 * memory managment
 * processor management
 * resource sharing
-* security
 * scheduling
+* security
 
 |        | Layers of Software                  |
 |--------|-------------------------------------|
@@ -65,7 +65,7 @@ Docker is a tool that allows developers, sys-admins etc. to easily deploy their 
 
 
 ## Key benefit of Docker
-* The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development. 
+* The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development.
 * Unlike virtual machines, containers do not have the high overhead and hence enable more efficient usage of the underlying system and resources.
 
 
@@ -251,9 +251,14 @@ Password: temppass
 3. Download an example vcf file, [NA12878.trio.vcf.gz](http://bioinformaticstools.centralus.cloudapp.azure.com/research/vcf-miner-sample-vcfs)
 from Mayo Clinic, and import it into the VCF-miner
 
-4. Analyze and apply filters (SAVANT_IMPACT HIGH and ACMG_gene_names) to find
+4. Import the vcf file NA12878.trio.vcf.gz into vcf-miner
+Below is the screenshot of VCF-Miner from Hart et al. Brief Bioinform. 2016 [PMID 26210358](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4793895)
+![vcfminerFigure1](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4793895/bin/bbv051f1p.jpg)
+**Quiz 11**: How many raw variants do you see? Find it out from vcf-miner.
+
+5. Analyze and apply filters (SAVANT_IMPACT == HIGH and ACMG_gene_names) to find
 two genes.
-**Quiz 11**: Which two genes survived filtering NA12878.trio.vcf.gz? Find it out from vcf-miner.
+**Quiz 12**: Which two genes survived filtering NA12878.trio.vcf.gz? Find it out from vcf-miner.
 
 
 ## More docker commands
