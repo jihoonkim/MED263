@@ -21,8 +21,30 @@
 
 
 ## Operating System
-An **operating system (OS)** is system software that manages computer hardware and software resources and provides common services for computer programs.
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/500px-Operating_system_placement.svg.png)
+An **operating system (OS)** is system software that manages computer hardware and software resources and provides common services for computer programs and it will enable users to interact with a computer system
+
+Following are important functions of an OS
+* device management
+* file management
+* job accounting
+* memory managment
+* processor management
+* resource sharing
+* security
+* scheduling
+
+|        | Layers of Software                  |
+|--------|-------------------------------------|
+| Top    | User-Written Scripts                |
+|        | User Interface                      |
+|        | Application                         |
+|        | Run-time Library                    |
+|        | Application Program Interface (API) |
+|        | **Operating System**                |
+|        | Device Drivers                      |
+|        | Basic Input Output System (BIOS)    |
+| Bottom | Hardware                            |
+
 
 **Quiz 1**: What is the market share of linux in the Desktop platform?
 Find it out from @[StatCounter](http://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201612-201712-bar)
@@ -79,12 +101,9 @@ https://store.docker.com/search?offering=community&q=&type=edition
 
 ## Docker version
 **Quiz 3**: What is the Docker version installed in your computer?
-Do you have the most recent version?
+Do you have the most recent version? Find it by running `docker --version` in the terminal or Power Shell
 
-Find it the terminal or Power Shell:
-```bash
-docker --version
-```
+
 
 
 ## Hello World Test
@@ -128,10 +147,7 @@ docker run -ti ubuntu
 ```
 
 **Quiz 5**: What is the version of Ubuntu? What is its codename?
-Find it out from the docker terminal:
-```bash
-cat /etc/lsb-release
-```
+Find it out from the docker terminal by running ```cat /etc/lsb-release```
 
 ## Basic linux commands
 1. Update the Ubuntu packages
@@ -161,10 +177,7 @@ apt-get install wget
 wget https://github.com/jihoonkim/dockerhub-iadmix/raw/master/HG001_chr22.vcf.gz
 ```
 **Quiz 6**: What is the file size of downloade file HG001_chr22.vcf.gz?
-Find it out from the docker terminal:
-```bash
-ls -hl
-```
+Find it out from the docker terminal by running ```ls -hl```
 
 6. Try extracting the compressed file in .gz format while keeping the original file
 ```bash
@@ -178,35 +191,22 @@ gunzip -k HG001_chr22.vcf.gz
 ls -hl
 ```
 **Quiz 7**: What is the compression ratio of gz with the file HG001_chr22.vcf?
-Find it out from the docker terminal:
-```bash
-ls -hl
-```
+Find it out from the docker terminal by running ```ls -hl```
 
 8. Print the last ten lines of the .vcf file
 ```bash
 tail -n 10 HG001_chr22.vcf
 ```
 **Quiz 8**: What is the the number of lines in .vcf file HG001_chr22.vcf?
-Find it out from the docker terminal:
-```bash
-wc -l HG001_chr22.vcf
-```
+Find it out from the docker terminal by running ```wc -l HG001_chr22.vcf```
 **Quiz 9**: What is the the md5 value of the last ten lines of the file HG001_chr22.vcf?
-Find it out from the docker terminal:
-```bash
-tail -n 10 HG001_chr22.vcf | md5sum
-```
+Find it out from the docker terminal by running ```tail -n 10 HG001_chr22.vcf | md5sum ```
 
 9. Search the line containing the SNP with RSID rs2401506.
 ```bash
 grep rs2401506 HG001_chr22.vcf
 ```
-**Quiz 10**: What are the reference allels and alternative alleles of SNP rs2401506 in this .vcf file?
-Find it out from the docker terminal:
-```bash
-tail -n 10 HG001_chr22.vcf | md5sum
-```
+**Quiz 10**: What are the reference allels and alternative alleles of SNP rs2401506 in this .vcf file? Find it out from the docker terminal by running ```tail -n 10 HG001_chr22.vcf | md5sum ```
 
 10. Create your own directory
 ```bash
@@ -253,7 +253,7 @@ from Mayo Clinic, and import it into the VCF-miner
 
 4. Analyze and apply filters (SAVANT_IMPACT HIGH and ACMG_gene_names) to find
 two genes.
-**Quiz 11**: Which two genes survived filtering NA12878.trio.vcf.gz?
+**Quiz 11**: Which two genes survived filtering NA12878.trio.vcf.gz? Find it out from vcf-miner.
 
 
 ## More docker commands
