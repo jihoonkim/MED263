@@ -22,8 +22,8 @@ This elective course will cover the latest advances in bioinformatics in the con
 * Student presentation (for final exam) date: Thursday March 8, 2018
 
 ## Courses
-| Week | Date                | Topic                                            | Instructor |
-|------|---------------------|--------------------------------------------------|------------|
+| Week | Date                          | Topic                                            | Instructor |
+|------|-------------------------------|--------------------------------------------------|------------|
 | 1    | Tuesday  1/9  | Overview & Bootcamp part 1 (docker and linux)    | Lucila Ohno-Machado (lohnomachado@ucsd.edu) and Jihoon Kim (j5kim@ucsd.edu) |
 | 1    | Thursday 1/11 | Bootcamp part 2 (conda, Jupyter notebok, and R)  | Jihoon Kim (j5kim@ucsd.edu) |
 | 2    | Tuesday  1/16 | Network Biology lecture                                  | Hannah Carter (hkcarter@ucsd.edu) |
