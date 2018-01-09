@@ -26,14 +26,14 @@ This elective course will cover the latest advances in bioinformatics in the con
 |------|---------------------|--------------------------------------------------|------------|
 | 1    | Tuesday  1/9  | Overview & Bootcamp part 1 (docker and linux)    | Lucila Ohno-Machado (lohnomachado@ucsd.edu) and Jihoon Kim (j5kim@ucsd.edu) |
 | 1    | Thursday 1/11 | Bootcamp part 2 (conda, Jupyter notebok, and R)  | Jihoon Kim (j5kim@ucsd.edu) |
-| 2    | Tuesday  1/16 | RNA-seq lecture                                  | Katie Fisch (kfisch@ucsd.edu) |
-| 2    | Thursday 1/18 | RNA-seq hands-on session                         | Katie Fisch  (kfisch@ucsd.edu)|
+| 2    | Tuesday  1/16 | Network Biology lecture                                  | Hannah Carter (hkcarter@ucsd.edu) |
+| 2    | Thursday 1/18 | Network Biology hands-on session                         | Hannah Carter (hkcarter@ucsd.edu) |
 | 3    | Tuesday  1/23  | Exome-seq and variant analysis lecture            | Olivier Harismendy (oharismendy@ucsd.edu) |
 | 3    | Thursday 1/25 | Exome-seq and variant analysis hands-on session   | Olivier Harismendy (oharismendy@ucsd.edu) |
 | 4    | Tuesday  1/30  | privacy-preserving logistic regression lecture          | Xiaoqian Jiang (x1jiang@ucsd.edu) |
-| 4    | Thursday 2/6   | privacy-preserving logistic regression hands-on session | Xiaoqian Jiang (x1jiang@ucsd.edu) |
-| 5    | Tuesday  2/8  | TBA lecture          | TBA |
-| 5    | Thursday 2/1  | TBA hands-on session | TBA |
+| 4    | Thursday 2/1   | privacy-preserving logistic regression hands-on session | Xiaoqian Jiang (x1jiang@ucsd.edu) |
+| 5    | Tuesday  2/6 | RNA-seq lecture                                  | Katie Fisch (kfisch@ucsd.edu) |
+| 5    | Thursday 2/8 | RNA-seq hands-on session                         | Katie Fisch  (kfisch@ucsd.edu)|
 | 6    | Tuesday  2/13 | Structural variants lecture          | Vikas Bansal (vibansal@ucsd.edu) |
 | 6    | Thursday 2/15  | Structural variants hands-on session | Vikas Bansal (vibansal@ucsd.edu) |
 | 7    | Tuesday  2/20  | Chip-Seq lecture          | Sven Heinz (sheinz@ucsd.edu) |
