@@ -1,8 +1,26 @@
 # Tutorial: Docker and linux
-[TOC]
 
 
-### Operating System
+## Table of Contents
+* Operating System
+* Bioinformatics and Linux
+* Docker
+* Key benefit of Docker
+* Image vs. Container
+* Container vs. Virtual Machine (VM)
+* Install Docker
+* Windows users only: enable virtualization in BIOS
+* Docker version
+* Hello World Test
+* iAdmix Test
+* Ubuntu docker
+* Basic linux commands
+* Variant prioritization with VCF-miner
+* More docker commands
+* References
+
+
+## Operating System
 An **operating system (OS)** is system software that manages computer hardware and software resources and provides common services for computer programs.
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/500px-Operating_system_placement.svg.png)
 
@@ -13,28 +31,29 @@ Find it out from @[StatCounter](http://gs.statcounter.com/os-market-share/deskto
 Find it from [WhatIsMyBrowser](https://www.whatismybrowser.com)
 
 
-### Bioinformatics and Linux
+## Bioinformatics and Linux
 * Bioinformatics relies heavily on Linux-based computers (hardware) and software.
 * Although many bioinformatics software tools are compiled on Mac OS and Windows,
 it is more conveneint to install and use the software on a Linux system.
 
 
-### Docker
+
+## Docker
 Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.
 
 
-### Key benefit of Docker
+## Key benefit of Docker
 * The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development. 
 * Unlike virtual machines, containers do not have the high overhead and hence enable more efficient usage of the underlying system and resources.
 
 
-### Image vs. Container
+## Image vs. Container
 * An **image** is a lightweight, stand-alone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
 
 * A **container** is a runtime instance of an image—what the image becomes in memory when actually executed. It runs completely isolated from the host environment by default, only accessing host files and ports if configured to do so.
 
 
-### Container vs. Virtual Machine (VM)
+## Container vs. Virtual Machine (VM)
 ![VMdiagram](https://www.docker.com/sites/default/files/Container%402x.png)
 * Virtual machines run guest operating systems—note the OS layer in each box.
 * This is resource intensive, and the resulting disk image and application state is an entanglement of OS settings, system-installed dependencies, OS security patches, and other easy-to-lose, hard-to-replicate ephemera.
@@ -45,12 +64,12 @@ Docker is a tool that allows developers, sys-admins etc. to easily deploy their 
 * Finally, because they contain all their dependencies, there is no configuration entanglement; a containerized app “runs anywhere.”
 
 
-### Install Docker
+## Install Docker
 Docker Community Edition (CE) for your operating system
 https://store.docker.com/search?offering=community&q=&type=edition
 
 
-### Windows users only: enable virtualization in BIOS
+## Windows users only: enable virtualization in BIOS
 1. Reboot the computer
 2. Enter BIOS menu by pressing **F1** for Toshiba, **F2** for Acer/ASUS/DELL/Lenovo/Samsung and **F10** for Compaq/HP
 3. Move around with arrow keys
@@ -58,7 +77,7 @@ https://store.docker.com/search?offering=community&q=&type=edition
 ![](https://i.stack.imgur.com/tNksn.jpg)
 5. Save and Exit
 
-### Docker version
+## Docker version
 **Quiz 3**: What is the Docker version installed in your computer?
 Do you have the most recent version?
 
@@ -68,7 +87,7 @@ docker --version
 ```
 
 
-### Hello World Test
+## Hello World Test
 1. Click **Docker Quickstart** icon to start Docker
 2. Open a terminal and type
 3. Open a terminal and type the following command
@@ -90,7 +109,7 @@ To generate this message, Docker took the following steps:
 ```
 
 
-### iAdmix Test
+## iAdmix Test
 Given the called variant file, we want to estimate the ancestry of this individual.
 ```bash
 docker run -ti j5kim/iadmix:latest /bin/bash /testrun/testrun.sh
@@ -102,7 +121,7 @@ Consult the [HapMap3](http://www.sanger.ac.uk/resources/downloads/human/hapmap3.
 Source: Bansal et al. BMC Bioinfo 2015
 Fast individual ancestry inference from DNA sequence data leveraging allele frequencies for multiple populations. [PMID: 25592880](https://www.ncbi.nlm.nih.gov/pubmed/25592880)
 
-### Ubuntu docker
+## Ubuntu docker
 Start running a ubuntu docker
 ```bash
 docker run -ti ubuntu
@@ -114,7 +133,7 @@ Find it out from the docker terminal:
 cat /etc/lsb-release
 ```
 
-### Basic linux commands
+## Basic linux commands
 1. Update the Ubuntu packages
 ```bash
 apt-get update
@@ -217,7 +236,7 @@ vim myfile.txt
 
 
 
-### Variant prioritization with VCF-miner
+## Variant prioritization with VCF-miner
 1. Start running vcf-miner docker
 ```bash
 docker run -d -p 8888:8080 stevenhart/vcf-miner
@@ -234,10 +253,10 @@ from Mayo Clinic, and import it into the VCF-miner
 
 4. Analyze and apply filters (SAVANT_IMPACT HIGH and ACMG_gene_names) to find
 two genes.
-**Quiz 11**: Which two genes survived above filters with NA12878.trio.vcf.gz?
+**Quiz 11**: Which two genes survived filtering NA12878.trio.vcf.gz?
 
 
-### More docker commands
+## More docker commands
 Show running containers
 ```bash
 docker ps
@@ -260,6 +279,6 @@ docker images
 
 
 
-### References
+## References
 https://docs.docker.com/get-started/
 https://docker-curriculum.com/
