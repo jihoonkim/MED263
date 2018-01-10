@@ -168,7 +168,7 @@ pwd
 
 4. Try downloading an external file
 ```bash
-wget https://github.com/jihoonkim/dockerhub-iadmix/blob/master/HG001_chr22.vcf.gz
+wget https://github.com/jihoonkim/dockerhub-iadmix/raw/master/HG001_chr22.vcf.gz
 ```
 
 5. Install missing package **wget** first and try again downloading the file
@@ -176,7 +176,7 @@ wget https://github.com/jihoonkim/dockerhub-iadmix/blob/master/HG001_chr22.vcf.g
 apt-get install wget
 wget https://github.com/jihoonkim/dockerhub-iadmix/raw/master/HG001_chr22.vcf.gz
 ```
-**Quiz 6**: What is the file size of downloade file HG001_chr22.vcf.gz?
+**Quiz 6**: What is the file size of downloaded file HG001_chr22.vcf.gz?
 Find it out from the docker terminal by running ```ls -hl```
 
 6. Try extracting the compressed file in .gz format while keeping the original file
