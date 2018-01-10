@@ -34,8 +34,8 @@ This elective course will cover the latest advances in bioinformatics in the con
 | 4    | Thursday 2/1   | privacy-preserving logistic regression hands-on session | Xiaoqian Jiang (x1jiang@ucsd.edu) |
 | 5    | Tuesday  2/6 | RNA-seq lecture                                  | Katie Fisch (kfisch@ucsd.edu) |
 | 5    | Thursday 2/8 | RNA-seq hands-on session                         | Katie Fisch  (kfisch@ucsd.edu)|
-| 6    | Tuesday  2/13 | Structural variants lecture          | Vikas Bansal (vibansal@ucsd.edu) |
-| 6    | Thursday 2/15  | Structural variants hands-on session | Vikas Bansal (vibansal@ucsd.edu) |
+| 6    | Tuesday  2/13 | Prioritizing disease mutations using DNA sequence data lecture          | Vikas Bansal (vibansal@ucsd.edu) |
+| 6    | Thursday 2/15  | Prioritizing disease mutations using DNA sequence data hands-on session | Vikas Bansal (vibansal@ucsd.edu) |
 | 7    | Tuesday  2/20  | Chip-Seq lecture          | Sven Heinz (sheinz@ucsd.edu) |
 | 7    | Thursday 2/22  | Chip-Seq hands-on session | Sven Heinz (sheinz@ucsd.edu) |
 | 8    | Tuesday  2/27  | GRO-seq lecture            | Chris Benner (cbenner@ucsd.edu) |
