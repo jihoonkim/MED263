@@ -15,7 +15,7 @@
 # add a following line to sources.list
 #export CRAN_URL=http://cran.r-project.org
 export CRAN_URL=http://cran.stat.ucla.edu
-bash -c " echo -e '\n'deb ${CRAN_URL}/bin/linux/ubuntu  trusty/ >>  /etc/apt/sources.list "
+bash -c " echo -e '\n'deb ${CRAN_URL}/bin/linux/ubuntu  xenial/ >>  /etc/apt/sources.list "
 
 
 # add key to sign CRAN pacakges
@@ -48,8 +48,8 @@ apt-get install -y r-base-dev
 # Install R Studio
 #-----------------------------------------------------------------------------
 apt-get install -y libapparmor1 gdebi-core
-wget https://download1.rstudio.org/rstudio-1.0.136-amd64.deb
-gdebi -n rstudio-1.0.136-amd64.deb
+wget https://download1.rstudio.org/rstudio-xenial-1.1.383-amd64.deb
+gdebi -n rstudio-xenial-1.1.383-amd64.deb
 
 
 #-----------------------------------------------------------------------------
