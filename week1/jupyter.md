@@ -5,6 +5,16 @@
 ### References
 * CONDA : https://conda.io/docs/user-guide
 
+
+### Install ANACONDA
+1. Open a browser and go to [ANACONDA Download](https://www.anaconda.com/download)
+2. Click your own Operating System (Windows/macOS/Linux) to download the installation file
+3. S
+
+
+
+
+
 ### Conda
 * Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux.
 * Conda quickly installs, runs and updates packages and their dependencies.
@@ -166,7 +176,7 @@ python --version
 7. Deactivate the snowflakes environment and then revert your PATH to its previous state:
 Linux, macOS:
 ```bash
-source deactivate 
+source deactivate
 ```
 Windows:
 ```bash
