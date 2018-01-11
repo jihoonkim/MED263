@@ -1,0 +1,134 @@
+# MED263 R Tutorial
+
+### Calculate some numbers
+
+```{r, echo = TRUE }
+1 + 2
+2^4
+log(16, 2)
+log(1000, 3)
+choose(5, 2)
+```
+
+
+### Data types
+
+##### 1. Logical
+```{r, echo = TRUE }
+relapse <- TRUE
+typeof( relapse )
+relapse
+sbp <- c(160, 110, 105, 150, 170)
+sbp > 120
+diag <- ifelse( sbp > 120, "hypertension", "normal")
+```
+
+
+##### 2. Number
+```{r, echo = TRUE }
+ldl <- 100
+typeof( ldl )
+hdl <- 60
+vldl <- 25
+totalChol <- hdl + ldl + vldl
+totalChol 
+```
+
+
+##### 3. Vector of numbers
+```{r, echo = TRUE }
+cholesterol <- c(177, 193, 195, 209, 226)
+typeof( cholesterol )
+length( cholesterol )
+mean( cholesterol )
+max( cholesterol )
+```
+
+##### 4. Vector of characters
+```{r, echo = TRUE }
+genotype <- c("AA", "AG", "GG")
+typeof( genotype )
+```
+
+##### 5. Factors
+```{r, echo = TRUE }
+alleles <- c( "AG", "GG", "AA", "AA", "AA", "AA", "AA", "AG", "AG", "GG", "GG", "GG", "GG", "AA")
+typeof( alleles )
+alleles 
+alleles <- factor( alleles )
+levels( alleles )
+typeof( alleles )
+alleles
+table( alleles )
+```
+
+
+
+##### 6. Data Frames 
+```{r, echo = TRUE } 
+genotype <- c("AA", "AA", "AA",  "AA", "AA", "GG", "GG", "GG", "GG")
+mrna <- c(100, 90, 105, 87, 92, 20, 24, 35, 27)
+ethnicity <- c("AFR", "AFR", "AFR", "AMR",  "AFR", "ASN", "EUR", "EUR", "EUR")
+relapse <- c("yes", "yes", "yes", "no", "yes", "no", "no", "no", "no")
+study <- data.frame( genotype, mrna, ethnicity, relapse)
+dim( study )
+head( study )
+```
+
+
+### Load data from a file 
+```{r, echo = TRUE}
+# Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. 
+# They describe characteristics of the cell nuclei present in the image. 
+url <-"http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+pima <- read.table( url, sep=",")
+colnames( pima ) <- c("pregnancy", "gtt", "dbp", "skinthickness", "insulin", "bmi", "familyhistory", "age", "diabetes")
+head( pima )
+dim( pima )
+table( pima$diabetes )
+```
+
+### Box plot
+```{r, echo = TRUE}
+boxplot( gtt ~ diabetes, data = pima)
+```
+
+### Box plot with added features
+```{r, echo = TRUE}
+boxplot( gtt ~ diabetes, 
+         data = pima, 
+         boxwex = 0.3,
+         col = c("orange", "royalblue"),
+         main = "Pima Indians Diabetes Study",
+         ylab = "Glucose concentration", 
+         xlab = "Diabetes")
+```
+
+
+### Two group comparison, glucose concentration in GTT
+```{r, echo = TRUE}
+case <- pima$gtt[ pima$diabetes == 1]
+control <- pima$gtt[ pima$diabetes == 0]
+t.test( case, control ) 
+t.test( case, control )$p.value
+```
+
+### Two group comparison, Diastolic blood pressure (DBP)
+```{r, echo = TRUE}
+case <- pima$dbp[ pima$diabetes == 1]
+control <- pima$dbp[ pima$diabetes == 0]
+t.test( case, control ) 
+```
+
+### Box plot of DBP
+```{r, echo = TRUE}
+boxplot( dbp ~ diabetes, 
+         data = pima, 
+         boxwex = 0.3,
+         main = "Pima Indians Diabetes Study",
+         ylab = "Diastolic blood pressure", 
+         xlab = "Diabetes")
+```
+
+
+
