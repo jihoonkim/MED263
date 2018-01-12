@@ -1,6 +1,4 @@
-# Week 2. Network Biology (Hanna Carter)
-
-
+# Week 2. Network Biology (Hannah Carter)
 
 ### How to use Docker to run Jupyter Notebook 
 
