@@ -36,7 +36,7 @@ install.packages("NetIndices", repos = targetrepo)
 
 8. Stop Jupyter by Ctrl+C in Terminal or Anaconda Prompt.
 
-9. To re-start the container, look up the container ID and replace that ID with a8d2efac23ff below in Terminal or Anaconda Prompt.
+9. To re-start the container, look up your container ID and replace current container ID, **a8d2efac23ff**, below with your own in Terminal or Anaconda Prompt.
 ```bash
 docker ps -a
 docker start -i a8d2efac23ff
