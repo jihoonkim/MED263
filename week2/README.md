@@ -6,7 +6,7 @@
 
 2. Start running docker by typing following command in Terminal (macOS/Linux) or Anaconda Prompt (Windows). Replace `/Users/johndoe/mylocalfolder` with your workding directory in your local/host computer (=laptop computer). This directory will contain your Jupyter Notebook .ipynb file.
 ```bash
-docker run -it --rm -p 8888:8888 -v /Users/johndoe/mylocalfolder:/home/jovyan/work --user root -e NB_UID=1000 -e GRANT_SUDO=yes jupyter/r-notebook
+docker run -it -p 8888:8888 -v /Users/johndoe/mylocalfolder:/home/jovyan/work --user root -e NB_UID=1000 -e GRANT_SUDO=yes jupyter/r-notebook
 ```
 
 3. Find the displayed message like below in Terminal or Anaconda Prompt, and copy the URL into your browser. The URL should look like this with a differnt hash token value:
