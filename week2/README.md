@@ -1,5 +1,20 @@
 # Week 2. Network Biology (Hannah Carter)
 
+### Download data
+You will need to download **week2_HannahCarter.ipynb** file from the class Git webpage.
+
+Use **git** to download the whole class material
+```bash
+git clone https://github.com/jihoonkim/MED263
+cd MED263/week2
+```
+
+Or download .zip file from the browser
+https://github.com/jihoonkim/MED263
+--> Clone or Download
+--> Download ZIP
+
+
 ### How to run Jupyter Notebook with Docker
 
 1. Install Docker
