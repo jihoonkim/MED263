@@ -10,7 +10,7 @@
 
 3. Please download and extract materials and recource data in [Zip file](https://ucsdcloud-my.sharepoint.com/:u:/g/personal/j5kim_ucsd_edu/EXR69n7AktVGuR3Gb0Oo_SMBYUWoPWYS5ZQpqOEMxKGyCQ) to your working directory.
 
-4. Start running docker by typing following command in Terminal (macOS/Linux) or Anaconda Prompt (Windows). Replace `/Users/johndoe/mylocalfolder` with your own working directory in your local/host computer (=laptop computer).
+4. Start running docker by typing following command in Terminal (macOS/Linux) or Docker Quickstart Terminal (Windows). Replace `/Users/johndoe/mylocalfolder` with your own working directory in your local/host computer (=laptop computer).
 ```bash
 docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-harismendy /bin/bash
 ```
