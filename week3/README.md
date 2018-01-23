@@ -16,4 +16,10 @@ docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-harismendy
 ```
 
 
-### IGV 
+### Integrative Genomics Viewer (IGV)
+
+1. Install [Java](https://www.java.com/en/download).
+
+2. Install [Integrative Genomics Viewer (IGV)](http://software.broadinstitute.org/software/igv/download).
+
+3. 
