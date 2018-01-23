@@ -12,7 +12,7 @@
 
 4. Start running docker by typing following command in Terminal (macOS/Linux) or Anaconda Prompt (Windows). Replace `/Users/johndoe/mylocalfolder` with your workding directory in your local/host computer (=laptop computer).
 ```bash
-docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-harismendy
+docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-harismendy /bin/bash
 ```
 
 
@@ -21,5 +21,3 @@ docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-harismendy
 1. Install [Java](https://www.java.com/en/download).
 
 2. Install [Integrative Genomics Viewer (IGV)](http://software.broadinstitute.org/software/igv/download).
-
-3. 
