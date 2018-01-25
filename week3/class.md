@@ -34,7 +34,7 @@ you type 'exit' to kill it
 How many lines in the CGC.bed file?
 
 ```{bash}
-wc –l ../resources/CGC.exons.bed
+wc -l ../resources/CGC.exons.bed
 ```
 
 How many CGC exons on chromosome 1 ?
@@ -52,13 +52,13 @@ cut –f 4 ../resources/CGC.exons.bed | sort | uniq | wc –l
 how many exons per CGC gene ?
 
 ```{bash}
-cut –f 4 ../resources/CGC.exons.bed | sort | uniq –c | sort –r | more
+cut -f 4 ../resources/CGC.exons.bed | sort | uniq -c | sort -r | more
 ```
 
 what is the longest gene in the list ?
 
 ```{bash}
-awk '$5=$3-$2' ../resources/CGC.exons.bed | sort –nrk 5 | head
+awk '$5=$3-$2' ../resources/CGC.exons.bed | sort -nrk 5 | head
 ```
 
 what is the sum of the length of all the exons
@@ -86,7 +86,7 @@ mkdir fastqc
 Run fastqc on all files
 
 ```{bash}
-for file in ../materials/*SRR*fastq.gz; do fastqc –o fastqc $file & done
+for file in ../materials/*SRR*fastq.gz; do fastqc -o fastqc $file & done
 ```
 
 Running MultiQC
@@ -95,7 +95,7 @@ Running MultiQC
 cd fastqc
 multiqc . # the dot indicates the current directory
 cd ..
-tar -cvf fastqc_results.tar fastqc #creates an archive of the results
+tar --vf fastqc_results.tar fastqc #creates an archive of the results
 ```
 
 Now open the html file on your laptop to browse the results.
@@ -107,17 +107,17 @@ Now open the html file on your laptop to browse the results.
 
 Start a Screen session
 ```{bash}
-screen –S alignment
+screen -S alignment
 ```
 
 Alignment + convert to sorted bam
 ```{bash}
-bwa mem ../resources/chr1.fa.gz ../materials/SRR866442_1.fastq.gz ../materials/SRR866442_2.fastq.gz | samtools view –buSh - > SRR866442.bam
+bwa mem ../resources/chr1.fa.gz ../materials/SRR866442_1.fastq.gz ../materials/SRR866442_2.fastq.gz | samtools view -buSh - > SRR866442.bam
 ```
 
 Sort and index the bam file
 ```{bash}
-samtools sort –m 2G SRR866442.bam > SRR866442.sorted.bam
+samtools sort -m 2G SRR866442.bam > SRR866442.sorted.bam
 samtools index SRR866442.sorted.bam
 ```
 
