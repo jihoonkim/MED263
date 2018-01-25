@@ -141,7 +141,7 @@ samtools view ../materials/CPTRES7.chr21.bam | awk '$6~/[ID]/' | wc -l
 
 how many reads over the CGC exons
 ```{bash}
-samtools view –L ../resources/CGC.exons.bed ../materials/CPTRES7.chr21.bam | wc -l
+samtools view -L ../resources/CGC.exons.bed ../materials/CPTRES7.chr21.bam | wc -l
 ```
 
 
