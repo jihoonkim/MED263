@@ -99,3 +99,7 @@ wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
 cd /opt
 
 pip install multiqc
+
+# install java
+apt-get update
+apt-get install default-jre
