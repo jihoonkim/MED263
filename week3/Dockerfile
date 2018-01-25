@@ -11,7 +11,6 @@ WORKDIR /opt
 RUN apt-get update -y                                                      && \
     apt-get install -y wget                                                && \
     wget https://github.com/jihoonkim/MED263/raw/master/week3/provision.sh && \
-    wget https://github.com/jihoonkim/MED263/raw/master/week3/class.sh && \
     bash provision.sh      
 
 ### change a working directory to /work
