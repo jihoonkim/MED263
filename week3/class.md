@@ -40,7 +40,7 @@ wc –l ../resources/CGC.exons.bed
 How many CGC exons on chromosome 1 ?
 
 ```{bash}
-awk ‘$1==“chr1”’ ../resources/CGC.exons.bed | wc -l
+awk '$1=="chr1"' ../resources/CGC.exons.bed | wc -l
 ```
 
 how many CGC genes on chromsome 1?
