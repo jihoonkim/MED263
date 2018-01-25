@@ -58,13 +58,13 @@ cut –f 4 ../resources/CGC.exons.bed | sort | uniq –c | sort –r | more
 what is the longest gene in the list ?
 
 ```{bash}
-awk ‘$5=$3-$2’ ../resources/CGC.exons.bed | sort –nrk 5 | head
+awk '$5=$3-$2' ../resources/CGC.exons.bed | sort –nrk 5 | head
 ```
 
 what is the sum of the length of all the exons
 
 ```{bash}
-awk ‘{sum=sum+$3-$2} END {print sum/NR}’ ../resources/CGC.exons.bed
+awk '{sum=sum+$3-$2} END {print sum/NR}' ../resources/CGC.exons.bed
 ```
 
 
@@ -136,7 +136,7 @@ samtools flagstat ../materials/CPTRES7.chr21.bam > CPTRES7.flagstat.txt
 
 How many “gapped reads” ?
 ```{bash}
-samtools view ../materials/CPTRES7.chr21.bam | awk ‘$6~/[ID]/’ | wc -l
+samtools view ../materials/CPTRES7.chr21.bam | awk '$6~/[ID]/' | wc -l
 ```
 
 how many reads over the CGC exons
