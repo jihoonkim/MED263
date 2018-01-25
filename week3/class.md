@@ -154,7 +154,7 @@ Locate the bam and bai file to your laptop, open with IGV
 ### Calculating Coverage Depth
 
 
-what fraction of the CGC chr1 are covered by more than 20 reads
+what fraction of the CGC chr21 are covered by more than 20 reads
 ```{bash}
 grep '^chr21' ../resources/CGC.exons.bed | samtools depth -b - ../materials/CPTRES7.chr21.bam | awk '$3>20' | wc -l
 grep '^chr21' ../resources/CGC.exons.bed | awk '{sum+=$3-$2} END {print sum}' #total number of CGC exons bp on chr21
