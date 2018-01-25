@@ -101,5 +101,5 @@ cd /opt
 pip install multiqc
 
 # install java
-apt-get update
-apt-get install default-jre
+apt-get update 
+apt-get install -y default-jre

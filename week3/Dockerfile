@@ -10,7 +10,7 @@ WORKDIR /opt
 ### download and run the provisioning script
 RUN apt-get update -y                                                      && \
     apt-get install -y wget                                                && \
-    wget https://github.com/jihoonkim/MED263/raw/master/week3/provision.sh && \
+    wget https://raw.githubusercontent.com/jihoonkim/MED263/master/week3/provision.sh && \
     bash provision.sh      
 
 ### change a working directory to /work
