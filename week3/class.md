@@ -17,7 +17,7 @@ Create a screen session
 screen –S myfirstscreen
 ```
 
-You press ^A^D to detach
+You press ctrl-A then D to detach
 
 You call -x to attach back
 
@@ -31,7 +31,7 @@ you type 'exit' to kill it
 
 ### UNIX/AWK to work with intervals
 
-How many lines in the CGC.bed file?
+How many lines in the CGC file?
 
 ```{bash}
 wc -l ../resources/CGC.exons.bed
@@ -43,7 +43,7 @@ How many CGC exons on chromosome 1 ?
 awk '$1=="chr1"' ../resources/CGC.exons.bed | wc -l
 ```
 
-how many CGC genes on chromsome 1?
+how many CGC genes?
 
 ```{bash}
 cut –f 4 ../resources/CGC.exons.bed | sort | uniq | wc –l
@@ -80,25 +80,23 @@ zcat ../materials/SRR866442_1.fastq.gz | more
 Create an output directory
 
 ```{bash}
-mkdir fastqc
+mkdir fastqc_dir
 ```
 
 Run fastqc on all files
 
 ```{bash}
-for file in ../materials/*SRR*fastq.gz; do fastqc -o fastqc $file & done
+for file in ../materials/*SRR*fastq.gz; do fastqc -o fastqc_dir $file & done
 ```
 
-Running MultiQC
+Running MultiQC to aggregate all the results
 
 ```{bash}
 cd fastqc
 multiqc . # the dot indicates the current directory
-cd ..
-tar --vf fastqc_results.tar fastqc #creates an archive of the results
 ```
 
-Now open the html file on your laptop to browse the results.
+Now open the  resulting html file on your laptop to browse the results.
 
 
 
@@ -139,7 +137,7 @@ How many “gapped reads” ?
 samtools view ../materials/CPTRES7.chr21.bam | awk '$6~/[ID]/' | wc -l
 ```
 
-how many reads over the CGC exons
+how many reads overlap the CGC exons?
 ```{bash}
 samtools view -L ../resources/CGC.exons.bed ../materials/CPTRES7.chr21.bam | wc -l
 ```
@@ -154,15 +152,18 @@ Locate the bam and bai file to your laptop, open with IGV
 ### Calculating Coverage Depth
 
 
-what fraction of the CGC chr21 are covered by more than 20 reads
+what fraction of CGC exon base pairs are covered by more than 20 reads
 ```{bash}
-grep '^chr21' ../resources/CGC.exons.bed | samtools depth -b - ../materials/CPTRES7.chr21.bam | awk '$3>20' | wc -l
-grep '^chr21' ../resources/CGC.exons.bed | awk '{sum+=$3-$2} END {print sum}' #total number of CGC exons bp on chr21
+#count all
+samtools depth -b ../resources/CGC.exons.bed ../materials/CPTRES7.chr21.bam  | wc -l
+#count greater than 20
+samtools depth -b ../resources/CGC.exons.bed ../materials/CPTRES7.chr21.bam  | awk '$3>20' | wc -l
 ```
 
 how many RUNX1 base pairs are covered at 20x or greater?
 ```{bash}
 bedtools coverage -a ../resourcesCGC.exons.bed -b ../material/CPTRES7.chr21.bam -hist | grep 'RUNX1' | awk '$5>20' | awk '{sum+=$6} END {print sum}' #solution #1
+
 grep 'RUNX1' ../resources/CGC.exons.bed | samtools depth -b - ../materials/CPTRES7.chr21.bam | awk '$3>20' | wc -l #solution #2
 ```
 
@@ -175,15 +176,16 @@ tabix -p vcf ../materials/CPTRES1vs15.vcf.gz
 ```
 
 how many variants pass the filters?
+
+first remove the header with 'zgrep', then filter for PASS filter using 'awk' and count the rows using 'wc -l'.
 ```{bash}
-zgrep -v '^##' ../materials/CPTRES1vs15.vcf.gz | awk '$7=="PASS"' | wc -l
+zgrep -v '^#' ../materials/CPTRES1vs15.vcf.gz | awk '$7=="PASS"' | wc -l
 ```
 
-Filter the variants
+Filter the variants passing filter using bcftools
 ```{bash}
 bcftools filter -i 'FILTER=="PASS"' ../materials/CPTRES1vs15.vcf.gz > CPTRES1vs15.PASS.vcf.gz
 ```
-
 
 What is the transition to transversion ratio?
 ```{bash}
@@ -191,6 +193,8 @@ bcftools stats CPTRES1vs15.PASS.vcf.gz
 ```
 
 how many somatic variants ?
+
+somatic variants are flagged with the INFO field SS=2. 
 ```{bash}
 bcftools filter -i 'INFO/SS==2' CPTRES1vs15.PASS.vcf.gz | wc -l
 ```
