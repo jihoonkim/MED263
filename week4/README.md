@@ -4,10 +4,10 @@
 
 ### Weka
 
-1. Check if your computer already have Java by running following command in Terminal (Mac OS/Linux) or Command Prompt (Windows):
+1. Check if your computer already has Java by running following command in Terminal (Mac OS/Linux) or Command Prompt (Windows):
 ```bash
 java --version
-``` 
+```
 if not, install [Java](https://www.java.com/en/download)
 
 2. Install [Weka](https://www.cs.waikato.ac.nz/ml/weka/downloading.html), a collection of machine learning algorithms for data mining tasks.
@@ -20,7 +20,7 @@ java -jar weka.jar
 
 
 ### FAMuSS Data
-Download a [data](https://github.com/jihoonkim/MED263/raw/master/week4/dt_283.csv) from Functional single nucleotide polymorphisms Associated with human MUscle Size and Strength study or FAMuSS.
+Download a [FAMuSS data](https://github.com/jihoonkim/MED263/raw/master/week4/dt_283.csv) from Functional single nucleotide polymorphisms Associated with human MUscle Size and Strength study.
 
 
 This is a process data from Andrea Foulkes' tutorial, [Stat-Gen](http://www.stat-gen.org).
