@@ -19,13 +19,14 @@ java -jar weka.jar
 ```
 
 
-### Data
-Download a data from Functional Single Nucleotide Polymorphisms Associated with Human Muscle Size and Strength study [FAMuSS](https://github.com/jihoonkim/MED263/raw/master/week4/dt_283.csv).
+### FAMuSS Data
+Download a [data](https://github.com/jihoonkim/MED263/raw/master/week4/dt_283.csv) from Functional single nucleotide polymorphisms Associated with human MUscle Size and Strength study or FAMuSS.
 
 
 This is a process data from Andrea Foulkes' tutorial, [Stat-Gen](http://www.stat-gen.org).
 
-More references
+More references can be found below.
+
 1. Pescatello et al. Biomed Res Int 2013
 Highlights from the functional single nucleotide polymorphisms associated with human muscle size and strength or FAMuSS study, [PMID: 24455711](https://www.ncbi.nlm.nih.gov/pubmed/24455711)
 
