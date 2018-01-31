@@ -17,7 +17,7 @@ This elective course will cover the latest advances in bioinformatics in the con
 
 ## Dates
 * Class start date: Tuesday January 9, 2018
-* Clss end date: Thursday March 8, 2018
+* Class end date: Thursday March 8, 2018
 * Submission deadline for final exam report: 1:59 pm Thursday March 8, 2018
 * Student presentation (for final exam) date: Thursday March 8, 2018
 
@@ -42,6 +42,20 @@ This elective course will cover the latest advances in bioinformatics in the con
 | 9    | Thursday 3/1   | GRO-seq  hands-on session | Chris Benner (cbenner@ucsd.edu)  |
 | 9    | Tuesday  3/6  | Ethics, Privacy, and Policy lecture          | Cinammon Bloss (cbloss@ucsd.edu) |
 | 9    | Thursday 3/8   | Student Presentation | Jihoon Kim (j5kim@ucsd.edu) |
+
+
+## Office Hours
+* 3:30-4:30 pm after class Tuesdays and Thursdays at room 304, MET building
+* If these hours don't work you, email to Andre (affaustino@ucsd.edu) or Jihoon (j5kim@ucsd.edu) to schdedule different hours, preferrably on Tuesdays and Thursdays.
+
+
+## Homework
+* You will get a homework every Thursday.
+* The expected level of homework is that whoever attended and followed well on the Thursday hands-on course should be able to answer the homework questions in a few hours.
+* Homework is due by the following Thursday right before class (1:59 pm Thursdays).
+* Turn in the homework to TA Andre(affaustino@ucsd.edu) by email.
+* Show all codes with answers to the questions.
+
 
 
 ## Final Exam
