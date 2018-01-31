@@ -202,6 +202,7 @@ bcftools filter -i 'INFO/SS==2' CPTRES1vs15.PASS.vcf.gz | wc -l
 export the soamtic variant to tsv
 ```{bash}
 bcftools filter -i 'INFO/SS==2' CPTRES1vs15.PASS.vcf.gz | bcftools view -O z > CPTRES1vs15.PASS.SOM.vcf.gz
+tabix -p vcf CPTRES1vs15.PASS.SOM.vcf.gz
 vcf2tsv -g CPTRES1vs15.PASS.SOM.vcf.gz > CPTRES1vs15.PASS.SOM.tsv
 ```
 
