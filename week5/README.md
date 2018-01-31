@@ -3,6 +3,12 @@
 ### Download Jupyter Notebook
 
 1. Download the [Jupyter Notebook for RNA-seq](https://github.com/jihoonkim/MED263/raw/master/week5/RNASeq123.ipynb) to your laptop computer from the [MED263 course web-page](https://github.com/jihoonkim/MED263/tree/master/week5). Note that usual right-click-save-link-as would'nt work for a file download in GitHub. Do the followings. Click file, select **raw**, and right-click-save-link-as.
+In Mac OS or linux terminal, you can use wget to download files.
+```bash
+cd /Users/johndoe/mylocalfolder
+wget https://github.com/jihoonkim/MED263/raw/master/week5/RNASeq123.ipynb
+wget https://github.com/jihoonkim/MED263/raw/master/week5/RNASeq123-MED263HW.ipynb
+```
 
 2. Copy the downloade file above, **RNASeq123.ipynb**, to a local directory. And give it a name, for example, /Users/johndoe/mylocalfolder. This will be used in later steps.
 
