@@ -1,4 +1,4 @@
-# Week 4. Privacy-preserving logistic regression (Xiaoqian Jiang)
+# Week 4. Classification model and survival analysis in biomedicine (Xiaoqian Jiang)
 
 
 

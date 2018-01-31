@@ -30,8 +30,8 @@ This elective course will cover the latest advances in bioinformatics in the con
 | 2    | Thursday 1/18 | Network Biology hands-on session                         | Hannah Carter (hkcarter@ucsd.edu) |
 | 3    | Tuesday  1/23  | Exome-seq and variant analysis lecture            | Olivier Harismendy (oharismendy@ucsd.edu) |
 | 3    | Thursday 1/25 | Exome-seq and variant analysis hands-on session   | Olivier Harismendy (oharismendy@ucsd.edu) |
-| 4    | Tuesday  1/30  | privacy-preserving logistic regression lecture          | Xiaoqian Jiang (x1jiang@ucsd.edu) |
-| 4    | Thursday 2/1   | privacy-preserving logistic regression hands-on session | Xiaoqian Jiang (x1jiang@ucsd.edu) |
+| 4    | Tuesday  1/30  | Classification model and survival analysis in biomedicine | Xiaoqian Jiang (x1jiang@ucsd.edu) |
+| 4    | Thursday 2/1   | Classification model and survival analysis in biomedicine hands-on session | Xiaoqian Jiang (x1jiang@ucsd.edu) |
 | 5    | Tuesday  2/6 | RNA-seq lecture                                  | Katie Fisch (kfisch@ucsd.edu) |
 | 5    | Thursday 2/8 | RNA-seq hands-on session                         | Katie Fisch  (kfisch@ucsd.edu)|
 | 6    | Tuesday  2/13 | Prioritizing disease mutations using DNA sequence data lecture          | Vikas Bansal (vibansal@ucsd.edu) |
