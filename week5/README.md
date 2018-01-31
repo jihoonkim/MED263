@@ -1,14 +1,18 @@
 # Week 5. RNA-seq analysis (Kathleen Fisch)
 
 ### Download Jupyter Notebook
-Download the [Jupyter Notebook for RNA-seq](https://github.com/jihoonkim/MED263/raw/master/week5/RNASeq123.ipynb) to your laptop computer from the [MED263 course web-page](https://github.com/jihoonkim/MED263/tree/master/week5). Note that usual right-click-save-link-as would'nt work for a file download in GitHub. Do the followings. Click file, select **raw**, and right-click-save-link-as.
+
+1. Download the [Jupyter Notebook for RNA-seq](https://github.com/jihoonkim/MED263/raw/master/week5/RNASeq123.ipynb) to your laptop computer from the [MED263 course web-page](https://github.com/jihoonkim/MED263/tree/master/week5). Note that usual right-click-save-link-as would'nt work for a file download in GitHub. Do the followings. Click file, select **raw**, and right-click-save-link-as.
+
+2. Copy the downloade file above, **RNASeq123.ipynb**, to a local directory. And give it a name, for example, /Users/johndoe/mylocalfolder. This will be used in later steps.
 
 
 
 ### Run with Docker
 
-1. Start running docker by typing following command in Terminal (macOS/Linux) or Docker Quickstart Terminal (Windows). Replace /Users/johndoe/mylocalfolder with your own working directory in your local/host computer (=laptop computer).
+1. Change to the local directory with .ipynb file above and start running docker by typing following command in Terminal (macOS/Linux) or Docker Quickstart Terminal (Windows). Replace /Users/johndoe/mylocalfolder with your own working directory in your local/host computer (=laptop computer).
 ```bash
+cd /Users/johndoe/mylocalfolder
 docker run -it -p 8888:8888 -v /Users/johndoe/mylocalfolder:/home/jovyan/work/notebooks ccbbatucsd/rnaseq123-docker
 ```
 
@@ -35,8 +39,9 @@ biocLite("Mus.musculus")
 biocLite("Homo.sapiens")
 ```
 
-2. Start running Jupyter Notebook by typing following command in Terminal (macOS/Linux) or Anaconda Prompt (Windows)
+2. Change to the local directory with .ipynb file above and start running Jupyter Notebook by typing following command in Terminal (macOS/Linux) or Anaconda Prompt (Windows)
 ```bash
+cd /Users/johndoe/mylocalfolder
 jupyter notebook
 ```
 
