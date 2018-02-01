@@ -1,7 +1,7 @@
 # Week 4. Classification model and survival analysis in biomedicine (Xiaoqian Jiang)
 
 
-### Homework using Weka
+### Homework 4 using Weka
 
 1. Downaod the homework data,[dt_283_homework.csv](https://github.com/jihoonkim/MED263/raw/master/week4/dt_283_homework.csv), from the class GitHub
 2. Load the file **dt_283_homework.csv** using Weka
