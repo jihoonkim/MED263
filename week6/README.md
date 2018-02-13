@@ -6,9 +6,12 @@
 
 1. Install Docker
 
-2. Choose and change to a working directory in your host computer (your laptop computer in most cases).
+2. Choose a working directory, for example, `/Users/johndoe/mylocalfolder`,  and change to that directory in your host computer (your laptop computer in most cases).
+```bash
+cd /Users/johndoe/mylocalfolder
+```
 
-3. Start running docker by typing following command in Terminal (macOS/Linux) or Docker Quickstart Terminal (Windows). Replace `/Users/johndoe/mylocalfolder` with your own working directory in your local/host computer (=laptop computer).
+3. Start running docker by typing following command in Terminal (macOS/Linux) or Docker Quickstart Terminal (Windows). Be sure to replace `/Users/johndoe/mylocalfolder` with your own working directory in your local/host computer (=laptop computer).
 ```bash
 docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-bansal /bin/bash
 ```
@@ -28,8 +31,7 @@ docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-bansal /bin/ba
 ```bash
 cd /work
 git clone https://github.com/vibansal/med263.git
-mv med263 week6
-cd week6
+cd med263
 ```
 
 ## 1. Analysis of loss-of-function mutations
