@@ -5,7 +5,7 @@
 ## 0. Preparation
 
 ```Shell
-cd ~
+cd /work
 git clone https://github.com/vibansal/med263.git
 mv med263 week6
 cd week6
