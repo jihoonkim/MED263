@@ -4,7 +4,7 @@
 #   Author : Vikas Bansal 
 #
 #	docker build -t j5kim/med263-bansal .
-#	docker run -ti -v $(pwd):/work j5kim/med263-bansal:latest bash
+#	docker run -ti -v $(pwd):/work j5kim/med263-bansal:latest /bin/bash
 #	docker commit -a "Jihoon Kim" $(docker ps -a -q | head -n 1) j5kim/med263-bansal
 #	docker login --username=j5kim 
 #	docker push j5kim/med263-bansal
