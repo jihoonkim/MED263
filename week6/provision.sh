@@ -75,4 +75,3 @@ git clone https://github.com/vibansal/hapcut.git
 	cd hapcut 
 	make all
 	echo -e export PATH=/opt/hapcut:$PATH  >> /etc/profile
-	source /etc/profile

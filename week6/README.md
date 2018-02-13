@@ -2,9 +2,30 @@
 
 ---
 
+### Docker
+
+1. Install Docker
+
+2. Choose and change to a working directory in your host computer (your laptop computer in most cases).
+
+3. Start running docker by typing following command in Terminal (macOS/Linux) or Docker Quickstart Terminal (Windows). Replace `/Users/johndoe/mylocalfolder` with your own working directory in your local/host computer (=laptop computer).
+```bash
+docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-bansal /bin/bash
+```
+
+
+### Integrative Genomics Viewer (IGV)
+
+1. Install [Java](https://www.java.com/en/download).
+
+2. Install [Integrative Genomics Viewer (IGV)](http://software.broadinstitute.org/software/igv/download).
+
+
+---
+
 ## 0. Preparation
 
-```Shell
+```bash
 cd /work
 git clone https://github.com/vibansal/med263.git
 mv med263 week6
@@ -16,13 +37,13 @@ Loss-of-function (LoF) mutations in genes are expected to have a strong impact o
 
 (i) We will use the 'tabix' tool to download the portion of the ExAc VCF file that contains all mutations in the KMT2D gene. 'tabix' is a very useful command line tool that works with tabular data (VCF files, bed files) to extract the subset of lines that overlap a genomic interval (start and end of the KMT2D gene in this example).
 
-```Shell
+```bash
 tabix -h ftp://ftp.broadinstitute.org/pub/ExAC_release/release0.3.1/ExAC.r0.3.1.sites.vep.vcf.gz 12:49412758-49453557  > KMT2D.ExAc.vcf
 ```
 
 (ii) Using simple grep commands, we can identify the number of LoF variant sites in this VCF file. LoF variants are of three types: stop_gain, splice_acceptor/splice_donor and frameshift.
 
-```Shell
+```bash
 grep "stop_gain" KMT2D.ExAc.vcf | grep PASS | wc -l
 grep "splice_acceptor" KMT2D.ExAc.vcf | grep PASS | wc -l
 grep "splice_donor" KMT2D.ExAc.vcf | grep PASS | wc -l
@@ -33,7 +54,7 @@ What is the total number of LoF variant sites in the KMT2D gene ? Does the numbe
 
 (iii) Notice that some of the LoF sites are multi-allelic, i.e. the same base has multiple variant alleles. This information is represented in the VCF file on a single line but makes it difficult to parse it. We will use the python script "count_lof.py" to calculate the combined frequency of LoF variants in this gene.
 
-```Shell
+```bash
 python count_lof.py KMT2D.ExAc.vcf
 ```
 
@@ -44,7 +65,7 @@ The two files needed for this analysis:
 * fordist_cleaned_exac_nonTCGA_z_pli_rec_null_data.txt 
 * sample.LoFgenes
 
-```Shell
+```bash
 sort -k 2,2 DATA/fordist_cleaned_exac_nonTCGA_z_pli_rec_null_data.txt > allgenes.scores
 sort -k 1,1 DATA/sample.LoFgenes > sample.LoFgenes.sorted
 join -1 2 -2 1 allgenes.scores sample.LoFgenes.sorted | cut -d ' ' -f1,20 | sort -k 2,2g > sample.LoFgenes.scores
@@ -64,7 +85,7 @@ The first line of this file gives information about the tissues/cell-lines and e
 
 (i) Extract the gene expression values for KMT2D from the data. 
 
-```Shell
+```bash
 grep KMT2D DATA/GTEx_Analysis_v6p_RNA-seq_RNA-SeQCv1.1.8_gene_median_rpkm.gct
 ```
 KMT2D is expressed at a high level across virtually all tissues which is consistent with the multi-organ phenotype associated with Kabuki syndrome. A visual plot of the RPKM values can be seen at http://gtexportal.org/home/gene/KMT2D 
@@ -72,13 +93,13 @@ KMT2D is expressed at a high level across virtually all tissues which is consist
 
 (ii) Compare the expression pattern for KMT2D to a tissue-specific gene such as INS which is expressed at a very high level in the pancreas (RPKM = 1289) and at very low levels in all other tissues: http://gtexportal.org/home/gene/INS 
 
-```Shell
+```bash
 cat DATA/GTEx_Analysis_v6p_RNA-seq_RNA-SeQCv1.1.8_gene_median_rpkm.gct | awk '{ if ($2 == "INS") print; }' 
 ```
 
 (iii) MLL2/KMT2D is the primary gene that is mutated in Kabuki syndrome (discussed in lecture). KDM6A is another gene that has been implicated in Kabuki syndrome. This suggests that the genes should have a similar expression profile. We will calculate the correlation between the expression profiles of KMT2D and KDM6A using the scipy.stats.spearmanr function:
 
-```Shell
+```bash
 python corr.py KMT2D KDM6A
 ```
 
@@ -87,13 +108,13 @@ The correlation between the expression values of the two genes is high. This is 
 
 (iv) Next, we will use correlation analysis to find genes that have a very similar (corr. coefficient > 0.9) expression profile to KMT2D.
 
-```Shell
+```bash
 python corr.py KMT2D all > KMT2D.highcorrgenes
 ```
 
 (v) Sort the list by the correlation coefficient value to find the top three genes whose expression is highly correlated with the expression profile of KMT2D. Use the constrained LoF scores data to determine if these genes are also constrained against LoF mutations.
 
-```Shell
+```bash
 sort -k 3,3g KMT2D.highcorrgenes | tail -n 5
 grep KMT2B DATA/fordist_cleaned_exac_nonTCGA_z_pli_rec_null_data.txt | cut -f2,20
 grep BRPF1 DATA/fordist_cleaned_exac_nonTCGA_z_pli_rec_null_data.txt | cut -f2,20
@@ -113,7 +134,7 @@ Input files are (BAM file and VCF file for each platform in the region chr6:117,
 
 (i) First, we will assemble haplotypes using the Illumina sequence data: 
 
-```Shell
+```bash
 ~/hapcut/extractHAIRS --bam DATA/na12878.illumina.bam --VCF DATA/na12878.illumina.vcf > na12878.illumina.fragments
 ~/hapcut/HAPCUT --fragments na12878.illumina.fragments --VCF DATA/na12878.illumina.vcf --out na12878.illumina.haplotypes --maxiter 20 > na12878.illumina.log 
 ```
@@ -121,14 +142,14 @@ The output file 'na12878.illumina.haplotypes' is a text file with information ab
 
 Next, we will get statistics on the number of haplotype blocks in this file and the average length of each haplotype block: 
 
-```Shell
+```bash
 grep BLOCK na12878.illumina.haplotypes  | awk '{ b++; len += $9; } END { print "blocks:",b,"mean-length",len/b; }'
 ```
 From the output, we can see that there are 21 haplotype blocks. The input VCF file has 111 variants (103 of which are heterozygous). 
 
 (ii) We will repeat the same process to assemble haplotypes using the Pacific Biosciences SMRT long-read data: 
 
-```Shell
+```bash
 ~/hapcut/extractHAIRS --bam DATA/na12878.pacbio.bam --VCF DATA/na12878.pacbio.vcf > na12878.pacbio.fragments
 ~/hapcut/HAPCUT --fragments na12878.pacbio.fragments --VCF DATA/na12878.pacbio.vcf --out na12878.pacbio.haplotypes --maxiter 20 > na12878.pacbio.log
 grep BLOCK na12878.pacbio.haplotypes  | awk '{ b++; len += $9; } END { print "blocks:",b,"mean-length",len/b; }'
@@ -138,7 +159,7 @@ From the output, we observe that the all the 103 heterozygous variants were asse
 
 (iii) We can visualize the aligned reads for the two technologies using the IGV tool. 
 
-```Shell
+```bash
 java -jar ~/IGV_2.3.89/igv.jar  DATA/na12878.illumina.bam chr6:117,198,376-117,253,326 
 ```
 
