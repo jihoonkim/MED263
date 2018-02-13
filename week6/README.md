@@ -135,8 +135,8 @@ Input files are (BAM file and VCF file for each platform in the region chr6:117,
 (i) First, we will assemble haplotypes using the Illumina sequence data: 
 
 ```bash
-~/hapcut/extractHAIRS --bam DATA/na12878.illumina.bam --VCF DATA/na12878.illumina.vcf > na12878.illumina.fragments
-~/hapcut/HAPCUT --fragments na12878.illumina.fragments --VCF DATA/na12878.illumina.vcf --out na12878.illumina.haplotypes --maxiter 20 > na12878.illumina.log 
+extractHAIRS --bam DATA/na12878.illumina.bam --VCF DATA/na12878.illumina.vcf > na12878.illumina.fragments
+HAPCUT --fragments na12878.illumina.fragments --VCF DATA/na12878.illumina.vcf --out na12878.illumina.haplotypes --maxiter 20 > na12878.illumina.log 
 ```
 The output file 'na12878.illumina.haplotypes' is a text file with information about variants that could be phased together into haplotype blocks. For each variant, the 2nd and 3rd columns indicate whether the '0' allele (reference) or '1' allele (variant) is on the first (or second) haplotype. 
 
@@ -150,8 +150,8 @@ From the output, we can see that there are 21 haplotype blocks. The input VCF fi
 (ii) We will repeat the same process to assemble haplotypes using the Pacific Biosciences SMRT long-read data: 
 
 ```bash
-~/hapcut/extractHAIRS --bam DATA/na12878.pacbio.bam --VCF DATA/na12878.pacbio.vcf > na12878.pacbio.fragments
-~/hapcut/HAPCUT --fragments na12878.pacbio.fragments --VCF DATA/na12878.pacbio.vcf --out na12878.pacbio.haplotypes --maxiter 20 > na12878.pacbio.log
+extractHAIRS --bam DATA/na12878.pacbio.bam --VCF DATA/na12878.pacbio.vcf > na12878.pacbio.fragments
+HAPCUT --fragments na12878.pacbio.fragments --VCF DATA/na12878.pacbio.vcf --out na12878.pacbio.haplotypes --maxiter 20 > na12878.pacbio.log
 grep BLOCK na12878.pacbio.haplotypes  | awk '{ b++; len += $9; } END { print "blocks:",b,"mean-length",len/b; }'
 ```
 
