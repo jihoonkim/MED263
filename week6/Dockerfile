@@ -14,7 +14,7 @@ RUN apt-get update -y                                                      && \
     bash provision.sh 
 
 # update the PATH environment variable
-ENV PATH /opt/hapcut:$PATH     
+ENV PATH="/opt/hapcut:${PATH}"
 
 ### change a working directory to /work
 WORKDIR /work
