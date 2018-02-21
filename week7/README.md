@@ -22,7 +22,7 @@ cd /Users/johndoe/mylocalfolder
 ```bash
 docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-heinz /bin/bash
 ```
-In this way, you are binding host directory (outside docker container) to the directoy inside docker container so that all your works (e.g. processed data, output) remain after docker container gets stopped. Otherwise, all your work will be gone and you will have to rerun everything from the beginning.
+In this way, you are binding a host directory (outside docker container) to the directoy inside docker container so that all your works (e.g. processed data, output) remain after docker container gets stopped. Otherwise, all your work will be gone and you will have to rerun everything from the beginning.
 
 2. `INSIDE DOCKER CONTAINER`, download the mouse (mm9) resource data
 ```bash
