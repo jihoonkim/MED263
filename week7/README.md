@@ -245,6 +245,47 @@ findMotifsGenome.pl sox2-specific-peaks.txt mm9r Motif-Results-Sox2-Specific/ -s
 Notice anything different about these results relative to the results from all Sox2 peaks that we found in step 9?
 
 
+# Homework
+
+---
+
+This homework follows the basic framework of the practical session above using additional SAM files that we did not analyze in class.  Below are questions found highlighted in RED - place the answers to the questions in a text file to turn in next week.
+
+1. If you haven't already downloaded the files for the practical session above, download the zip file containing SAM alignment files and unzip the archive (NOTE: these are the same as above):
+```bash
+wget -O samfiles.zip http://homer.ucsd.edu/homer/workshops/170209-MED263/samfiles.zip
+unzip samfiles.zip
+```
+
+2. Create tag directories for the remaining sam files using the makeTagDirectory command (H3K4me2, a histone modification found at enhancer and promoters, and Klf4, another pluripotent transcription factor).
+```
+Q1: What is the average GC% of the ChIP-fragments found in the H3K4me2 and Klf4 ChIP-seq experiments?(hint: look in the tagInfo.txt file or look at the values reported at the end of the makeTagDirectory command)
+```
+
+3. Next visualize the H3K4me2 and Klf4 ChIP-seq experiments by creating bedGraph files from the tag directories and using the UCSC genome browser upload and view the tracks. Go to the Zfp57 gene located on chr17, and zoom out 10x (relative to the length of the gene).
+```
+Q2: Within this range (chr17:37,102,000-37,184,000), where  is the highest Klf4 peak located (coordinates)? Is there significant signal for H3K4me2 and H3K27ac (relative to Input) in the vicinity of the peak (i.e. within 1kb)?
+```
+
+4. Find peaks for Klf4 and H3K4me2 ChIP-seq experiments. Remember that Klf4 is a transcription factor and H3K4me2 is a histone modification.  Also remember to consider the Input experiment as well!
+```
+Q3: How many peaks were found for Klf4 and H3K4me2?
+```
+
+5. Use annotatePeaks.pl to provide annotation for the Klf4 peaks from the previous step.  Look at the entry for the top/best peak in the file (top row after the header).
+```
+Q4: Which gene is the top Klf4 peak nearest to?  Is is located in an exon, intron, intergenic, or promoter region?
+```
+
+6. Use findMotifsGenome.pl to analyze the Klf4 peaks for the enriched DNA motifs found associated with the Klf4 peaks.  (remember to use a size range of 100 i.e. "-size 100").
+```
+Q5: What was the consensus sequence for the top de novo motif discovered by the motif finding program? What was the p-value? Which known motif was the best match to this motif?** (NOTE: since background sequences are random, the exact results may vary a little bit, particularly the exact p-value.  Also, the motif may appear in the reverse opposite direction, i.e AACCGG vs. CCGGTT).
+```
+
+7. Using annotatePeaks.pl, calculate the read coverage around the Klf4 peaks (+/- 2000 bp) for the H3K4me2, H3K27ac, Oct4, and Sox2 experiments. (Hints: The Klf4 peak file will be the first argument for annotatePeaks.pl, and set the options "-size 4000" and "-hist 10", and remember that you can specify multiple tag directories after the -d option).  Open the resulting file with a spreadsheet program or excel and graph the results (X-Y plot).
+```
+Q6: At what position relative to the Klf4 peak do each of the ChIP-seq experiments (Sox2, Oct4, H3K4me2, H3K27ac) reach their maximum coverage?  There may be multiple locations where the signal is high.
+```
 
 
 
