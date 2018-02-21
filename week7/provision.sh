@@ -91,8 +91,3 @@ wget http://homer.ucsd.edu/homer/configureHomer.pl
 perl /opt/homer/configureHomer.pl -install
 echo "export PATH=$PATH:/opt/homer/bin" >> /etc/profile
 
-
-
-# configure HOMER
-cd /opt/homer
-perl /opt/homer/configureHomer.pl -install mm9
