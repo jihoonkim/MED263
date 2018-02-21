@@ -13,6 +13,9 @@ RUN apt-get update -y                                                      && \
     wget https://raw.githubusercontent.com/jihoonkim/MED263/master/week7/provision.sh && \
     bash provision.sh 
 
+### environment variable 
+RUN /bin/bash -c 'source /etc/profile'
+
 # update the PATH environment variable
 #ENV PATH="/opt/homer/bin:${PATH}"
 
