@@ -35,7 +35,7 @@ cd /work
 wget -O samfiles.zip http://homer.ucsd.edu/homer/workshops/170209-MED263/samfiles.zip
 unzip samfiles.zip
 ```
-The archive should contain the following SAM files that have been aligned to the mouse mm9 genome:
+The archive should contain the following SAM files that have been aligned to the **mouse mm9 genome**:
 * h3k27ac-esc.chr17.2m.sam
 * h3k4me2-esc.chr17.2m.sam
 * input-esc.chr17.2m.sam
