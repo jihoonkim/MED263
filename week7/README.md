@@ -17,40 +17,34 @@ cd /Users/johndoe/mylocalfolder
 ```
 
 ## Step 1. Start running docker and download data
-Start running docker by typing following command in Terminal (macOS/Linux) or Docker Quickstart Terminal (Windows). Be sure to replace `/Users/johndoe/mylocalfolder` with your own working directory in your local/host computer (=laptop computer).
+
+1. Start running docker by typing following command in Terminal (macOS/Linux) or Docker Quickstart Terminal (Windows). Be sure to replace `/Users/johndoe/mylocalfolder` with your own working directory in your local/host computer (=laptop computer).
 ```bash
 docker run -it -v /Users/johndoe/mylocalfolder:/work j5kim/med263-heinz /bin/bash
 ```
 In this way, you are binding host directory (outside docker container) to the directoy inside docker container so that all your works (e.g. processed data, output) remain after docker container gets stopped. Otherwise, all your work will be gone and you will have to rerun everything from the beginning.
 
-
-
-`INSIDE DOCKER CONTAINER`, download the mouse (mm9) resource data
+2. `INSIDE DOCKER CONTAINER`, download the mouse (mm9) resource data
 ```bash
 perl /opt/homer/configureHomer.pl -install mm9
 ```
 
-Download example data, a zip file containing SAM alignment files, and unzip the archive.
+3. Download example data, a zip file containing SAM alignment files, and unzip the archive.
 ```bash
+cd /work
 wget -O samfiles.zip http://homer.ucsd.edu/homer/workshops/170209-MED263/samfiles.zip
 unzip samfiles.zip
 ```
-
 The archive should contain the following SAM files that have been aligned to the mouse mm9 genome:
-
 * h3k27ac-esc.chr17.2m.sam
 * h3k4me2-esc.chr17.2m.sam
 * input-esc.chr17.2m.sam
 * klf4-esc.chr17.2m.sam
 * oct4-esc.chr17.2m.sam
 * sox2-esc.chr17.2m.sam
-
 These files are originally from the following study investigating the roles that reprogramming factors play when transforming MEF (fibroblasts) into embryonic stem cells.
-
 [Chronis et al. Cooperative Binding of Transcription Factors Orchestrates Reprogramming](https://www.ncbi.nlm.nih.gov/pubmed/28111071)
-
 Sequencing Data: [GSE90893](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90893)
-
 For this tutorial we extracted the ChIP-seq experiments for several transcription factors and histone modifications performed ESC (embryonic stem cells).  To reduce runtimes, only reads that mapped to chr17 (and chr17_random) are included in the SAM files.
 
 
