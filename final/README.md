@@ -34,6 +34,7 @@ Start your final project by signing up on the [final project ](http://bit.ly/med
 
 
 ## Recent data analysis workflows published in Nature Protocols 
+Please feel free to replicate/modify published workflow with pro:
 
 - [A high-throughput functional genomics workflow based on CRISPR/Cas9-mediated
  targeted mutagenesis in zebrafish](https://www.ncbi.nlm.nih.gov/pubmed/27809318)
