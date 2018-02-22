@@ -12,11 +12,12 @@ Email a final project report pdf file to TA Andre Faustino (affaustino@ucsd.edu)
 ```
 
 ## Final project presentation
-Each student will do a 10-minute presentation on the last class day, Thursday March 8, 2018. This will help TA and instructors to understand more about your work
+Each student will do a 10-minute presentation on the last class day, Thursday March 8, 2018. This will help TA and instructors to understand more about your work.
 
 
 ## Sign-up your project
-Start your final project by signing up on the [final project ](http://bit.ly/med263students)
+Start your final project by signing up on the [final project](http://bit.ly/med263students)
+
 
 ## Hands-on session material of your own
 
@@ -58,8 +59,3 @@ Visit following repositories to find the data:
 - public genome data in [The International Genome Sample Resource](http://www.internationalgenome.org)
 - proteomics data in [PRIDE PRoteomics IDEntification](http://www.ebi.ac.uk/pride/archive)
 
-
-## Help from TA
-
-- TA will help you to install and configure software tools, if needed.
-- TA will help you to find data, if you can't find one or don't have any.
