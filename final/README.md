@@ -12,8 +12,7 @@ Email a final project report pdf file to TA Andre Faustino (affaustino@ucsd.edu)
 ```
 
 ## Final project presentation
-Each student will have a 10-miniute presentation on the last class day, Thursday March 8, 2018.
-
+Each student will do a 10-minute presentation on the last class day, Thursday March 8, 2018. This will help TA and instructors to understand more about your work
 
 
 ## Sign-up your project
@@ -34,7 +33,7 @@ Start your final project by signing up on the [final project ](http://bit.ly/med
 
 
 ## Recent data analysis workflows published in Nature Protocols 
-Please feel free to replicate/modify published workflow with pro:
+Please feel free to replicate/modify published workflow with proper citation:
 
 - [A high-throughput functional genomics workflow based on CRISPR/Cas9-mediated
  targeted mutagenesis in zebrafish](https://www.ncbi.nlm.nih.gov/pubmed/27809318)
