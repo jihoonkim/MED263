@@ -32,10 +32,18 @@ Start your final project by signing up on the [final project ](http://bit.ly/med
 - The example final project report (.pdf) can be found at [MED263 class GitHub](https://github.com/jihoonkim/MED263/raw/master/final/MED263_final_project_example.pdf).
 
 
-## Help from TA
 
-- TA will help you to install and configure software tools, if needed.
-- TA will help you to find data, if you can't find one or don't have any.
+## Recent data analysis workflows published in Nature Protocols 
+
+- [A high-throughput functional genomics workflow based on CRISPR/Cas9-mediated
+ targeted mutagenesis in zebrafish](https://www.ncbi.nlm.nih.gov/pubmed/27809318)
+- [Indel variant analysis of short-read sequencing data with Scalpel](https://www.ncbi.nlm.nih.gov/pubmed/27854363)
+- [Highly multiplexed targeted DNA sequencing from single nuclei](https://www.ncbi.nlm.nih.gov/pubmed/26741407)
+- [Methylation-assisted bisulfite sequencing to simultaneously map 5fC and 5caC 
+on a genome-wide scale for DNA demethylation analysis](https://www.ncbi.nlm.nih.gov/pubmed/27281647)
+- [MMRA MicroRNA Master Regulator Analysis](https://www.ncbi.nlm.nih.gov/pubmed/27305450)
+- [The MaxQuant computational platform for mass spectrometry-based shotgun proteomics](https://www.ncbi.nlm.nih.gov/pubmed/27809316)
+- [Using single nuclei for RNA-seq to capture the transcriptome of postmortem neurons](https://www.ncbi.nlm.nih.gov/pubmed/26890679)
 
 
 ## Data repositories
@@ -49,3 +57,9 @@ Visit following repositories to find the data:
 - public genome data in [Personal Genome Project](http://www.personalgenomes.org)
 - public genome data in [The International Genome Sample Resource](http://www.internationalgenome.org)
 - proteomics data in [PRIDE PRoteomics IDEntification](http://www.ebi.ac.uk/pride/archive)
+
+
+## Help from TA
+
+- TA will help you to install and configure software tools, if needed.
+- TA will help you to find data, if you can't find one or don't have any.
