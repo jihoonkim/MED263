@@ -40,7 +40,7 @@ This elective course will cover the latest advances in bioinformatics in the con
 | 7    | Thursday 2/22  | Chip-Seq hands-on session | Sven Heinz (sheinz@ucsd.edu) |
 | 8    | Tuesday  2/27  | GRO-seq lecture            | Chris Benner (cbenner@ucsd.edu) |
 | 9    | Thursday 3/1   | GRO-seq  hands-on session | Chris Benner (cbenner@ucsd.edu)  |
-| 9    | Tuesday  3/6  | Ethics, Privacy, and Policy lecture          | Cinammon Bloss (cbloss@ucsd.edu) |
+| 9    | Tuesday  3/6  | Ethics, Privacy, and Policy lecture          | Cinnamon Bloss (cbloss@ucsd.edu) |
 | 9    | Thursday 3/8   | Student Presentation | Jihoon Kim (j5kim@ucsd.edu) |
 
 
