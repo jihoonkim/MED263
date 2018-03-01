@@ -8,7 +8,7 @@
 Email a final project report pdf file to TA Andre Faustino (affaustino@ucsd.edu) by
 
 ```diff
-- 1:59 pm Thursday March 8, 2018
+- 11:59 pm Sunday March 18, 2018
 ```
 
 ## Final project presentation

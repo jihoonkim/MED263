@@ -18,7 +18,7 @@ This elective course will cover the latest advances in bioinformatics in the con
 ## Dates
 * Class start date: Tuesday January 9, 2018
 * Class end date: Thursday March 8, 2018
-* Submission deadline for final exam report: 1:59 pm Thursday March 8, 2018
+* Submission deadline for final exam report: 11:59 pm Sunday March 18, 2018
 * Student presentation (for final exam) date: Thursday March 8, 2018
 
 ## Courses
