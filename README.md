@@ -61,5 +61,5 @@ This elective course will cover the latest advances in bioinformatics in the con
 ## Final Exam
 * Create a hands-on session document to perform data analysis with your own data (public or private data) similar to MED 263 class
 * Following this document, students (or others) should be able to conduct a data analysis in the context of bioinformatics
-* Turn in the hands-on session document to TA (affaustino@ucsd.edu) prior to the last class (deadline  1:59 pm Thursday March 8, 2018)
+* Turn in the hands-on session document to TA (affaustino@ucsd.edu) prior to the last class (deadline  11:59 pm Sunday March 18, 2018)
 * Present the hands-on session during the class Thursday March 8, 2018 (10-minute presetation each)
